@@ -6,7 +6,8 @@
  */
 
 namespace WP_Rig\WP_Rig;
-// $hero_images	= get_field('hero_images');
+
+// $tagline			= get_field('tagline');
 
 ?>
 
@@ -15,9 +16,14 @@ namespace WP_Rig\WP_Rig;
 	&nbsp;
 </div>
 <?php the_custom_logo(); ?>
+
 <div class="titleTagWrapper">
-		<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-		<h2 class="tagline"><?php bloginfo( 'description' ); ?></h2>
+	<h1 class="site-title">
+		<?php the_title(); ?>
+	</h1>
+	<h2 class="tagline">
+	<!-- <?php echo $tagline; ?> -->
+	</h2>
 </div>
 
 </div><!-- .site-branding -->

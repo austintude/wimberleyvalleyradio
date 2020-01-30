@@ -7,19 +7,7 @@
 
 namespace WP_Rig\WP_Rig;
 
-
-
-?>
-
-
-
-<div class="site-info">
-
-
-<?php $footerloop = new \WP_Query( array( 'post_type' => 'footer_info', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
-
-<?php while( $footerloop->have_posts() ) : $footerloop->the_post();
-$contact_us_phone			= get_field('contact_us_phone');
+			$contact_us_phone			= get_field('contact_us_phone');
 			$contact_us_phone_link			= get_field('contact_us_phone_link');
 			$contact_us_street			= get_field('contact_us_street');
 			$contact_us_street_suite			= get_field('contact_us_street_suite');
@@ -39,7 +27,14 @@ $contact_us_phone			= get_field('contact_us_phone');
 			$instagram_link			= get_field('instagram_link');
 			$linkedin_link			= get_field('linkedin_link');
 			$google_map			= get_field('google_map');
-			?>
+
+?>
+
+
+<div class="site-info">
+
+
+
 
 
 	<div class="topBlock">
@@ -142,26 +137,28 @@ $contact_us_phone			= get_field('contact_us_phone');
 	<div class="blockTitle">
 		<h4><?php bloginfo( 'name' ); ?></h4>
 </div>
-
 <div class="blockImages">
-<?php while (have_rows('middle_images')) : the_row();
-$middle_image_1	= get_sub_field('middle_image_1');
-$middle_image_2	= get_sub_field('middle_image_2');
-?>
+		<?php while (have_rows('middle_images')) : the_row();
 
+// vars
+$middle_image_1 = get_sub_field('middle_image_1');
+$middle_image_1_alt = get_sub_field('middle_image_1_alt');
+$middle_image_2 = get_sub_field('middle_image_2');
+$middle_image_2_alt = get_sub_field('middle_image_2_alt');
+?>
 		<amp-img
-		src="<?php echo $middle_image_1['url']; ?>"
+		src="<?php echo $middle_image_1; ?>"
   width="640"
 			height="640"
 			layout="responsive"
-			alt="<?php echo $middle_image_1['alt']; ?>">
+			alt="<?php echo $middle_image_1_alt; ?>">
 		</amp-img>
 		<amp-img
-		src="<?php echo $middle_image_2['url']; ?>"
+		src="<?php echo $middle_image_2; ?>"
   width="640"
 			height="640"
 			layout="responsive"
-			alt="<?php echo $middle_image_2['alt']; ?>">
+			alt="<?php echo $middle_image_2_alt; ?>">
 		</amp-img>
 		<?php endwhile; ?>
 </div>
@@ -172,29 +169,32 @@ $middle_image_2	= get_sub_field('middle_image_2');
 </div>
 <div class="blockImages">
 <?php while (have_rows('right_images')) : the_row();
-$right_image_1	= get_sub_field('right_image_1');
-$right_image_2	= get_sub_field('right_image_2');
+
+// vars
+$right_image_1 = get_sub_field('right_image_1');
+$right_image_1_alt = get_sub_field('right_image_1_alt');
+$right_image_2 = get_sub_field('right_image_2');
+$right_image_2_alt = get_sub_field('right_image_2_alt');
 ?>
 		<amp-img
-		src="<?php echo $right_image_1['url']; ?>"
+		src="<?php echo $right_image_1; ?>"
   width="640"
 			height="640"
 			layout="responsive"
-			alt="<?php echo $right_image_1['alt']; ?>">
+			alt="<?php echo $right_image_1_alt; ?>">
 		</amp-img>
 		<amp-img
-		src="<?php echo $right_image_2['url']; ?>"
+		src="<?php echo $right_image_2; ?>"
   width="640"
 			height="640"
 			layout="responsive"
-			alt="<?php echo $right_image_2['alt']; ?>">
+			alt="<?php echo $right_image_2_alt; ?>">
 		</amp-img>
 		<?php endwhile; ?>
 </div>
 </div>
 
 </div>
-<?php endwhile;  wp_reset_query(); ?>
 <div class="baseBlock">
 
 <div id="themeLogo" aria-label="custom logo link">
@@ -213,4 +213,3 @@ $right_image_2	= get_sub_field('right_image_2');
 </div>
 
 </div><!-- .site-info -->
-
