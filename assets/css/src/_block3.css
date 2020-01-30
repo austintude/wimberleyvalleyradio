@@ -1,0 +1,24 @@
+.block3 {
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(90deg,#f55050,#f18a22,#f2f21f,#00793f,#4040fc,#9e04bc);
+	margin: 0;
+	text-align: center;
+	padding: 2rem 0 3rem;
+	& .ctaButton {
+		/* color: #282828;
+		border-color: rgba(0,0,0,0);
+		border-radius: 1px;
+		letter-spacing: 3px;
+		font-size: 16px;
+		font-family: 'Varela',Helvetica,Arial,Lucida,sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+		background-image: linear-gradient(1deg,#fcc653 0%,#fcc653 100%);
+		background-color: #fcd176; */
+		background: #fe0091;
+	}
+	& .contentMiddleBlock .contentMiddleBlockTitle {
+		font-size: 2rem;
+	}
+}

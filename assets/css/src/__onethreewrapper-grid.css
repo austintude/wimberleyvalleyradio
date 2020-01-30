@@ -1,0 +1,46 @@
+
+@supports (grid-area:auto){
+	.onethreewrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"cta"
+		"right"
+		"left";
+		& .leftOneThirdBlock {
+			grid-area: left;
+		& img {
+		}
+	}
+	& .rightTwoThirdsBlock {
+		grid-area: right;
+		padding: 1rem;
+    	text-align: justify;
+	}
+	& .ctaButton {
+		background: #fbd7d7;
+		width: 100vw;
+			}
+	@media (--content-query) {
+		grid-template-columns: 50vw 45vw;
+		grid-template-areas:
+		"cta cta"
+		"left right";
+		grid-gap: 5vw;
+		& .leftOneThirdBlock  {
+			grid-area: right;
+			margin-left: auto;
+   		 	margin-right: 4vw;
+    		margin-top: 4rem;
+		}
+		& .rightTwoThirdsBlock  {
+			grid-area: left;
+			padding: 0 5vw;
+		}
+		& .ctaButton {
+	grid-area: cta;
+		}
+
+	}
+	}
+}

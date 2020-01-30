@@ -1,0 +1,43 @@
+.page-template-about.has-sidebar {
+	& .site-header {
+		margin-top: 4rem;
+	}
+	& .site {
+		grid-template-columns: 1fr;
+		& .site-main {
+			/* @media (--wide-menu-query) {
+		margin: auto 5vw;
+			} */
+		& .wp-block-column {
+			padding: 2rem;
+		}
+		}
+	}
+	& main {
+		margin: 0 auto;
+		width: 80vw;
+		& h2 {
+			text-transform: uppercase;
+			@media (--content-query) {
+			margin-top: 5rem;
+			}
+		}
+		@media (--content-query) {
+		top: -10rem;
+
+		}
+	}
+	& #masthead amp-img.wp-post-image {
+		@media (--content-query) {
+		top: -15rem;
+		position: relative;
+		margin-bottom: -10rem;
+		}
+	}
+	& .titleTagWrapper .site-title {
+		@media (--content-query) {
+			top: -2rem;
+			position: relative;
+		}
+	}
+}
