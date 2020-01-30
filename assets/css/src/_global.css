@@ -368,18 +368,18 @@ select {
 	width: 100%;
 	padding: 0.5em 1em 0.5em 0;
 	text-decoration: none;
-	color: #222;
+	color: #fff;
 }
 .main-navigation ul li.current-menu-item {
 
 	& a {
-		color: #222;
+		color: #fff;
 	}
 	& a:after {
 		content: "";
 		display: block;
 		height: 4px;
-		background: linear-gradient(90deg,#fbd7d7,#fbd7d7,#fbd7d7,#38b6ff);
+		background: linear-gradient(90deg,#e5af4e,#e5af4e,#e5af4e,#000);
 	}
 }
 
