@@ -46,8 +46,8 @@ class Component implements Component_Interface {
 				[
 					'height'      => 250,
 					'width'       => 250,
-					'flex-width'  => true,
-					'flex-height' => true,
+					'flex-width'  => false,
+					'flex-height' => false,
 				]
 			)
 		);
