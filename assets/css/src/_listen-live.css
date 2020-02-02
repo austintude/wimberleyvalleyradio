@@ -1,0 +1,28 @@
+.liveLink {
+    max-width: 12rem;
+	margin-top: 0;
+	& a {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		z-index: 10;
+
+		& span {
+			z-index: 10;
+		}
+	}
+	& img {
+		z-index: 10;
+		max-height: 3rem;
+		margin-top: -.75rem;
+	}
+	@media (--content-query) {
+	position: absolute;
+	top: 0rem;
+	}
+}
+
+.primary-menu-container .liveLink img {
+	position: relative;
+}
+
+

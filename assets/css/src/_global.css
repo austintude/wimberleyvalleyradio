@@ -96,7 +96,7 @@ input[type="submit"] {
 	border-color: #ccc #ccc #bbb;
 	border-radius: 3px;
 	background: #e6e6e6;
-	color: #222;
+	color: #fff;
 	font-size: 0.75rem;
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
@@ -231,7 +231,7 @@ select {
 	font-stretch: condensed;
 	font-size: 80%;
 	text-transform: uppercase;
-	border: 2px solid #222;
+	border: 2px solid #fff;
 	border-radius: 0;
 	background: transparent;
 }

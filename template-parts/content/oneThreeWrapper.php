@@ -14,7 +14,8 @@ $cta_loading_image			= get_field('cta_loading_image');
 ?>
 	<div class="onethreewrapper">
 		<div class="leftOneThirdBlock">
-			<img src="<?php echo $leftonethirdblock['url']; ?>" alt="<?php echo $leftonethirdblock['alt']; ?>">
+			<!-- <img src="<?php echo $leftonethirdblock['url']; ?>" alt="<?php echo $leftonethirdblock['alt']; ?>"> -->
+			<iframe frameborder="0" width="900" height="300" lighthouse scrolling="no" style="text-align:center; vertical-align:middle;" src="https://radio.securenetsystems.net/radio_player_large.cfm?stationCallSign=KWVH"></iframe>
 
 		</div><!-- end .leftBlock -->
 		<div class="rightTwoThirdsBlock">
@@ -22,10 +23,11 @@ $cta_loading_image			= get_field('cta_loading_image');
 			<?php echo $righttwothirdsblock; ?>
 			</div><!-- end .content -->
 		</div><!-- end .rightBlock -->
-		<div class="ctaButton">
+		<!-- <div class="ctaButton">
   <a href="<?php echo $cta_form_url; ?>">
   <button id="estimate" class="btn btn-lg btn-danger" role="button" tabindex="0"><?php echo $cta_text; ?> »</button>
 </a>
-	</div><!-- end .ctaButton -->
+	</div> -->
+	<!-- end .ctaButton -->
 	</div> <!-- end .wrapper -->
 

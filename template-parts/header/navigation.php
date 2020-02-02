@@ -11,6 +11,7 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 	return;
 }
 
+
 ?>
 
 <nav id="site-navigation" class="main-navigation nav--toggle-sub nav--toggle-small" aria-label="<?php esc_attr_e( 'Main menu', 'wp-rig' ); ?>"
@@ -51,5 +52,24 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 
 	<div class="primary-menu-container">
 		<?php wp_rig()->display_primary_nav_menu( [ 'menu_id' => 'primary-menu' ] ); ?>
+		<?php $listenliveloop = new \WP_Query( array( 'post_type' => 'listen_live', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+
+<?php while( $listenliveloop->have_posts() ) : $listenliveloop->the_post();
+$listen_live_icon			= get_field('listen_live_icon');
+
+			?>
+
+	<div class="liveLink">
+
+		<a href="https://streamdb7web.securenetsystems.net/cirrusencore/KWVH">
+		<span>
+		Listen Live
+		</span>
+		<img src="<?php echo $listen_live_icon['url']; ?>" alt="<?php echo $listen_live_icon['alt']; ?>"/>
+	</a>
+	</div> <!-- liveLink -->
+	<?php endwhile;  wp_reset_query(); ?>
 	</div>
+
+
 </nav><!-- #site-navigation -->
