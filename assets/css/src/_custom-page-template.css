@@ -42,7 +42,7 @@
 		& h2 {
 			font-size: 2rem;
 			font-weight: 400;
-			border-bottom: solid 2px #333;
+			/* border-bottom: solid 2px #333; */
 			width: fit-content;
 		}
 

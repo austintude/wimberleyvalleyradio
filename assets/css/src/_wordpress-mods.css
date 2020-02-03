@@ -1,0 +1,8 @@
+.wp-block-columns {
+	& a {
+		color: #000;
+	}
+	& a:hover {
+		color: #260a8b;
+	}
+}

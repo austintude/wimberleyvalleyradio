@@ -646,17 +646,20 @@ justify-self: center;
 			text-decoration: none;
 		}
 	}
-	& #supremeSocial {
+	& #businessSocial {
 		grid-gap: .1rem;
 		width: 50%;
-		margin-left: 25%;
-		& #supremeSocial>#socialIcon1 {
+		display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+		& #businessSocial>#socialIcon1 {
 			width: 2rem;
 		}
 		& img {
 			margin: .3rem;
-			width: 12vw;
+			@media (--content-query) {
+			width: 4vw;
 		}
+	}
 	}
 }
 
