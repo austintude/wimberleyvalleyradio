@@ -38,12 +38,17 @@ namespace WP_Rig\WP_Rig;
 	<?php $listenliveloop = new \WP_Query( array( 'post_type' => 'listen_live', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 <?php while( $listenliveloop->have_posts() ) : $listenliveloop->the_post();
-$listen_live_icon			= get_field('listen_live_icon');
+$listen_live_tx			= get_field('listen_live_tx');
+$listen_live_link			= get_field('listen_live_link');
+$donate_txt			= get_field('donate_txt');
+$donate_link			= get_field('donate_link');
 
 			?>
 		<div class="listenLive">
 			<button>
-			Listen Live
+				<a href="<?php echo $listen_live_link; ?>">
+			<?php echo $listen_live_tx; ?>
+</a>
 			<!-- <img src="<?php echo $listen_live_icon['url']; ?>" alt="<?php echo $listen_live_icon['alt']; ?>"/> -->
 			</button>
 
@@ -52,7 +57,9 @@ $listen_live_icon			= get_field('listen_live_icon');
 
 <div class="donateNow">
 	<button>
-	Donate Now
+	<a href="<?php echo $donate_link; ?>">
+			<?php echo $donate_txt; ?>
+</a>
 	</button>
 
 </div><!-- donateNow -->

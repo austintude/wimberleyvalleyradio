@@ -662,7 +662,9 @@ justify-self: center;
 	}
 	}
 }
-
+.heroButtons a {
+    text-decoration: none;
+}
 /* Template Page mods begin */
 .page-template {
 
