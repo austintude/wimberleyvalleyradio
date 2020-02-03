@@ -9,7 +9,7 @@
 		color: #f7f7f7;
 	}
 	& .sectionCardsBlock {
-			grid-template-columns: repeat(auto-fit,minmax(90px,180px));
+			/* grid-template-columns: repeat(auto-fit,minmax(90px,180px)); */
 
 		& .sectionCard {
 		background: transparent;

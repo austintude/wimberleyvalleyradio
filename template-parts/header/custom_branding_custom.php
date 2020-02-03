@@ -6,7 +6,6 @@
  */
 
 namespace WP_Rig\WP_Rig;
-// $hero_images	= get_field('hero_images');
 
 ?>
 
@@ -15,6 +14,23 @@ namespace WP_Rig\WP_Rig;
 	&nbsp;
 </div>
 <?php the_custom_logo(); ?>
+
+<!-- <div class="titleTagWrapper">
+	<h1 class="site-title">
+		<?php the_title(); ?>
+	</h1>
+	<h2 class="tagline">
+	</h2>
+</div> -->
+
+<div class="titleTagWrapper">
+	<div class="heroText">
+	<!-- <img src="<?php echo $kwvh_logo['url']; ?>" alt="<?php echo $kwvh_logo['alt']; ?>"/> -->
+	<h1 class="site-title">
+		<?php the_title(); ?>
+	</h1>
+</div><!-- heroText -->
+
 <?php $hero_information = new \WP_Query( array( 'post_type' => 'hero_information', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 <?php while( $hero_information->have_posts() ) : $hero_information->the_post();
@@ -26,14 +42,7 @@ namespace WP_Rig\WP_Rig;
 		// $call_number_plus	= get_field('call_number_plus');
 		// $call_number_background_image	= get_field('call_number_background_image');
 		?>
-<div class="titleTagWrapper">
-	<div class="heroText">
-		<!-- <div class="heroTitle">
-		<?php the_title(); ?>
-</div> -->
-<!-- heroTitle -->
-	<img src="<?php echo $kwvh_logo['url']; ?>" alt="<?php echo $kwvh_logo['alt']; ?>"/>
-</div><!-- heroText -->
+
 	<div class="heroButtons">
 	<?php $listenliveloop = new \WP_Query( array( 'post_type' => 'listen_live', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
@@ -57,8 +66,9 @@ $listen_live_icon			= get_field('listen_live_icon');
 
 </div><!-- donateNow -->
 </div>
-</div>
 <?php endwhile;  wp_reset_query(); ?>
+
+</div>
 
 
 </div><!-- .site-branding -->

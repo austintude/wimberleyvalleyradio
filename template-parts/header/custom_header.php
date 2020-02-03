@@ -12,6 +12,6 @@ if ( ! has_header_image() ) {
 }
 
 ?>
-<figure class="header-image">
-	<?php the_header_image_tag(); ?>
+<figure class="header-image" amp-fx="parallax" data-parallax-factor="0.65">
+	<?php the_post_thumbnail(); ?>
 </figure><!-- .header-image -->

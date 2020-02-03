@@ -113,7 +113,7 @@ $contact_us_phone			= get_field('contact_us_phone');
 			</amp-img>
 </a>
 		</div>
-		<!-- <div id="socialIcon2">
+		<div id="socialIcon2">
 		<a href="<?php echo $instagram_link; ?>" rel="noopener" target="_blank">
 			<amp-img
 				src="<?php echo get_template_directory_uri() ?>/assets/images/instagram-icon.png"
@@ -134,7 +134,7 @@ $contact_us_phone			= get_field('contact_us_phone');
 				alt="linkedin icon">
 			</amp-img>
 </a>
-		</div> -->
+		</div>
 </div>
 </div>
 </div>

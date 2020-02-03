@@ -12,30 +12,28 @@ $block4_sectioncards	= get_field('block4_sectioncards');
 
 ?>
 
-<section class="block4" id="introduction">
+<section class="sponsors" id="introduction">
 	<div class="sectionHeader">
-					<h2 class="serviceTitle" id="services">WFLAG Thanks its Corporate Sponsors</h2>
+					<h2 class="serviceTitle" id="services">KWVH Thanks its Corporate Sponsors</h2>
 </div>
 
                     <div class="sectionCardsBlock">
+					<?php $underwriterloop = new \WP_Query( array( 'post_type' => 'underwriters', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
-					<?php while (have_rows('block4_sectioncards')) : the_row();
-						//vars
-						$sectioncard_id	= get_sub_field('sectioncard_id');
-						$sectioncard_title	= get_sub_field('sectioncard_title');
-						$sectioncard_img	= get_sub_field('sectioncard_img');
-						$sectioncard_link	= get_sub_field('sectioncard_link');
-					?>
+<?php while( $underwriterloop->have_posts() ) : $underwriterloop->the_post();
+$underwriter_link			= get_field('underwriter_link');
+?>
+
+
 						<div class="sectionCard" id="<?php echo $sectioncard_id; ?>">
-						<h3 class="mb1"><?php echo $sectioncard_title; ?></h3>
+						<h3 class="mb1"><?php the_title(); ?></h3>
 						<a
                                     class="ampstart-btn caps text-decoration-none inline-block"
-									href="<?php echo $sectioncard_link; ?>">
-									<img src="<?php echo $sectioncard_img['url']; ?>" alt="<?php echo $sectioncard_img['alt']; ?>" class=""/>
+									href="<?php echo $underwriter_link; ?>">
+									<?php the_post_thumbnail(); ?>
 							</a>
 						</div>
-						<?php endwhile; ?>
-
+						<?php endwhile;  wp_reset_query(); ?>
 
 
 

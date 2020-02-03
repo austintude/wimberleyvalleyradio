@@ -104,6 +104,12 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 2rem;
+	& .heroTitle {
+		z-index: 0;
+	}
+	& .heroText img {
+		z-index: 2;
+	}
 	@media (--content-query) {
 		/* margin-top: -18rem; */
 		grid-template-columns: 3fr 1fr;
