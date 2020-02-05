@@ -30,6 +30,7 @@
 
 			& img {
 				z-index: 1;
+				max-height: 100%;
 			}
 		}
 		& .gridContent {
@@ -64,7 +65,9 @@
 			& .gridCardItemLink:hover {
 				color: #fff;
 				background: rgb(255,99,71);
-
+				& a {
+					color: #fff;
+				}
 			}
 
 		}

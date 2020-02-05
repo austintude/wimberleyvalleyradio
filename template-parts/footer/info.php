@@ -158,13 +158,11 @@ $contact_us_phone			= get_field('contact_us_phone');
 		<img
 		src="<?php echo $middle_image_1['url']; ?>"
 
-			layout="responsive"
 			lightbox
 			alt="<?php echo $middle_image_1['alt']; ?>">
 		<img
 		src="<?php echo $middle_image_2['url']; ?>"
 
-			layout="responsive"
 			lightbox
 			alt="<?php echo $middle_image_2['alt']; ?>">
 
@@ -178,12 +176,10 @@ $contact_us_phone			= get_field('contact_us_phone');
 
 		<img
 		src="<?php echo $right_image_1['url']; ?>"
-			layout="responsive"
 			lightbox
 			alt="<?php echo $right_image_1['alt']; ?>">
 		<img
 		src="<?php echo $right_image_2['url']; ?>"
-			layout="responsive"
 			lightbox
 			alt="<?php echo $right_image_2['alt']; ?>">
 
