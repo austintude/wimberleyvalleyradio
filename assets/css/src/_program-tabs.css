@@ -69,9 +69,11 @@ amp-lightbox {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 200px;
+		grid-gap: 0.3rem;
 		@media (--content-query) {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr;
+		grid-gap: 1rem;
 		}
 		position: relative;
 		padding-top: 6rem;
