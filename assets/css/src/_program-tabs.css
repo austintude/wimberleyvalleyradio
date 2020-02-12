@@ -62,3 +62,54 @@ amp-selector[role=tablist] [role=tab][selected] + [role=tabpanel] {
     font-weight: 700;
     font-size: 1.4rem;
 }
+
+amp-lightbox {
+	background: rgba(0,0,0,.5);
+	& .gridCardDesc.lightbox {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 200px;
+		@media (--content-query) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		}
+		position: relative;
+		padding-top: 6rem;
+
+		& .gridCardImgLightbox amp-img {
+			max-width: 50vw;
+
+			@media (--content-query) {
+				max-width: auto;
+			}
+		}
+
+	& a.closeX {
+		position: absolute;
+		right: 5vw;
+		top: 12vh;
+	}
+	& .gridCardImgLightbox {
+		@media (--content-query) {
+		grid-column: 2;
+		}
+	}
+	& .showContent {
+	color: #fff;
+	margin-top: -10rem;
+	& p {
+		font-size: 0.8rem;
+	}
+	@media (--content-query) {
+	grid-column: 3;
+	margin-top: 0;
+	}
+}
+& .ctaShow {
+	@media (--content-query) {
+	grid-column: 2/3;
+	grid-row: 2;
+	}
+}
+	}
+}

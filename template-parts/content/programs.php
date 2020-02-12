@@ -33,7 +33,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 	</div>
 	<div id="tabpanel1"
 		role="tabpanel"
-		aria-labelledby="tab1">Monday content...
+		aria-labelledby="tab1">
 		<section class="gridCardWrapper">
 		<?php while (have_rows('grid_card_loop_monday')) : the_row();
 
@@ -45,12 +45,15 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 			$grid_card_item_link = get_sub_field('grid_card_item_link');
 			$grid_card_item_link_text = get_sub_field('grid_card_item_link_text');
 			$grid_card_item_time = get_sub_field('grid_card_item_time');
+			$grid_card_item_host = get_sub_field('grid_card_item_host');
+			$grid_card_item_prod = get_sub_field('grid_card_item_prod');
 			$grid_card_item_ampm = get_sub_field('grid_card_item_ampm');
 
 			?>
-			<div class="gridCardLoop" id="<?php echo $grid_card_item_id; ?>">
+			<div class="gridCardLoop" >
 
 					<div class="gridCardImg">
+
 						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
 					</div><!-- gridCardImg -->
 					<div class="gridContent">
@@ -58,74 +61,546 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 							<h3>
 								<?php echo $grid_card_item; ?>
 							</h3>
-						</div> <!-- gridCardItem -->
-						<div class="gridCardDesc">
-							<p>
-								<?php echo $grid_card_item_desc; ?>
-							</p>
 							<h5>
 							<?php echo $grid_card_item_time; ?>
-							</h5>
-							<h6>
+							<span>
 							<?php echo $grid_card_item_ampm; ?>
-							</h6>
-						</div> <!-- gridCardDesc -->
-						<?php if ($grid_card_item_link != null) { ?>
+</span>
+							</h5>
+
+
+
+						</div> <!-- gridCardItem -->
+
 						<div class="gridCardItemLink">
-							<a href="<?php echo $grid_card_item_link; ?>">
+							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
 								<?php echo $grid_card_item_link_text; ?>
-							</a>
+</a>
 						</div>
 						<!-- gridCardItemLink -->
-						<?php } ?>
+
 					</div> <!-- gridContent -->
+					<amp-lightbox id="<?php echo $grid_card_item_id; ?>" [open]="showLightbox<?php echo $grid_card_item_id; ?>" layout="nodisplay" on="lightboxClose:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: false})">
+							<div class="gridCardDesc lightbox" role="button" tabindex="0" on="tap:<?php echo $grid_card_item_id; ?>.close">
+								<a class="closeX" role="button" on="tap:<?php echo $grid_card_item_id; ?>.close">X</a>
+							<div class="gridCardImgLightbox">
+
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
+					</div><!-- gridCardImgLightbox -->
+							<div class="showContent">
+								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
+							<h5>Produced by: <?php echo $grid_card_item_prod; ?> </h5>
+								<p>
+									<?php echo $grid_card_item_desc; ?>
+								</p>
+							</div>
+							<!-- <div class="ctaShow">
+								<button>
+									More Info
+								</button>
+							</div> -->
+							<!-- ctaShow -->
+
+
+							</div> <!-- gridCardDesc -->
+						</amp-lightbox><!-- id="$grid_card_item_id;" -->
 
 			</div><!-- gridCardLoop -->
 		<?php endwhile; ?>
 	</section> <!-- end .gridCardWrapper -->
-</div>
+</div><!-- tabpanel1 -->
 	<div id="tab2"
 		role="tab"
 		aria-controls="tabpanel2"
 		option>Tuesday</div>
 	<div id="tabpanel2"
 		role="tabpanel"
-		aria-labelledby="tab2">Tuesday content... </div>
+		aria-labelledby="tab2">
+		<section class="gridCardWrapper">
+		<?php while (have_rows('grid_card_loop_tuesday')) : the_row();
+
+			// vars
+			$grid_card_item = get_sub_field('grid_card_item');
+			$grid_card_item_id = get_sub_field('grid_card_item_id');
+			$grid_card_item_img = get_sub_field('grid_card_item_img');
+			$grid_card_item_desc = get_sub_field('grid_card_item_desc');
+			$grid_card_item_link = get_sub_field('grid_card_item_link');
+			$grid_card_item_link_text = get_sub_field('grid_card_item_link_text');
+			$grid_card_item_time = get_sub_field('grid_card_item_time');
+			$grid_card_item_host = get_sub_field('grid_card_item_host');
+			$grid_card_item_prod = get_sub_field('grid_card_item_prod');
+			$grid_card_item_ampm = get_sub_field('grid_card_item_ampm');
+
+			?>
+			<div class="gridCardLoop" >
+
+					<div class="gridCardImg">
+
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
+					</div><!-- gridCardImg -->
+					<div class="gridContent">
+						<div class="gridCardItem">
+							<h3>
+								<?php echo $grid_card_item; ?>
+							</h3>
+							<h5>
+							<?php echo $grid_card_item_time; ?>
+							<span>
+							<?php echo $grid_card_item_ampm; ?>
+</span>
+							</h5>
+
+
+
+						</div> <!-- gridCardItem -->
+
+						<div class="gridCardItemLink">
+							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
+								<?php echo $grid_card_item_link_text; ?>
+</a>
+						</div>
+						<!-- gridCardItemLink -->
+
+					</div> <!-- gridContent -->
+					<amp-lightbox id="<?php echo $grid_card_item_id; ?>" [open]="showLightbox<?php echo $grid_card_item_id; ?>" layout="nodisplay" on="lightboxClose:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: false})">
+							<div class="gridCardDesc lightbox" role="button" tabindex="0" on="tap:<?php echo $grid_card_item_id; ?>.close">
+								<a class="closeX" role="button" on="tap:<?php echo $grid_card_item_id; ?>.close">X</a>
+							<div class="gridCardImgLightbox">
+
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
+					</div><!-- gridCardImgLightbox -->
+							<div class="showContent">
+								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
+							<h5>Produced by: <?php echo $grid_card_item_prod; ?> </h5>
+								<p>
+									<?php echo $grid_card_item_desc; ?>
+								</p>
+							</div>
+							<!-- <div class="ctaShow">
+								<button>
+									More Info
+								</button>
+							</div> -->
+							<!-- ctaShow -->
+
+
+							</div> <!-- gridCardDesc -->
+						</amp-lightbox><!-- id="$grid_card_item_id;" -->
+
+			</div><!-- gridCardLoop -->
+		<?php endwhile; ?>
+	</section> <!-- end .gridCardWrapper -->
+	</div><!-- tabpanel2 -->
 	<div id="tab3"
 		role="tab"
 		aria-controls="tabpanel3"
 		option>Wednesday</div>
 	<div id="tabpanel3"
 		role="tabpanel"
-		aria-labelledby="tab3">Wednesday content... </div>
+		aria-labelledby="tab3">
+		<section class="gridCardWrapper">
+		<?php while (have_rows('grid_card_loop_wednesday')) : the_row();
+
+			// vars
+			$grid_card_item = get_sub_field('grid_card_item');
+			$grid_card_item_id = get_sub_field('grid_card_item_id');
+			$grid_card_item_img = get_sub_field('grid_card_item_img');
+			$grid_card_item_desc = get_sub_field('grid_card_item_desc');
+			$grid_card_item_link = get_sub_field('grid_card_item_link');
+			$grid_card_item_link_text = get_sub_field('grid_card_item_link_text');
+			$grid_card_item_time = get_sub_field('grid_card_item_time');
+			$grid_card_item_host = get_sub_field('grid_card_item_host');
+			$grid_card_item_prod = get_sub_field('grid_card_item_prod');
+			$grid_card_item_ampm = get_sub_field('grid_card_item_ampm');
+
+			?>
+			<div class="gridCardLoop" >
+
+					<div class="gridCardImg">
+
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
+					</div><!-- gridCardImg -->
+					<div class="gridContent">
+						<div class="gridCardItem">
+							<h3>
+								<?php echo $grid_card_item; ?>
+							</h3>
+							<h5>
+							<?php echo $grid_card_item_time; ?>
+							<span>
+							<?php echo $grid_card_item_ampm; ?>
+</span>
+							</h5>
+
+
+
+						</div> <!-- gridCardItem -->
+
+						<div class="gridCardItemLink">
+							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
+								<?php echo $grid_card_item_link_text; ?>
+</a>
+						</div>
+						<!-- gridCardItemLink -->
+
+					</div> <!-- gridContent -->
+					<amp-lightbox id="<?php echo $grid_card_item_id; ?>" [open]="showLightbox<?php echo $grid_card_item_id; ?>" layout="nodisplay" on="lightboxClose:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: false})">
+							<div class="gridCardDesc lightbox" role="button" tabindex="0" on="tap:<?php echo $grid_card_item_id; ?>.close">
+								<a class="closeX" role="button" on="tap:<?php echo $grid_card_item_id; ?>.close">X</a>
+							<div class="gridCardImgLightbox">
+
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
+					</div><!-- gridCardImgLightbox -->
+							<div class="showContent">
+								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
+							<h5>Produced by: <?php echo $grid_card_item_prod; ?> </h5>
+								<p>
+									<?php echo $grid_card_item_desc; ?>
+								</p>
+							</div>
+							<!-- <div class="ctaShow">
+								<button>
+									More Info
+								</button>
+							</div> -->
+							<!-- ctaShow -->
+
+
+							</div> <!-- gridCardDesc -->
+						</amp-lightbox><!-- id="$grid_card_item_id;" -->
+
+			</div><!-- gridCardLoop -->
+		<?php endwhile; ?>
+	</section> <!-- end .gridCardWrapper -->
+	</div><!-- tabpanel3 -->
 		<div id="tab4"
 		role="tab"
 		aria-controls="tabpanel4"
 		option>Thursday</div>
 	<div id="tabpanel4"
 		role="tabpanel"
-		aria-labelledby="tab4">Thursday content... </div>
+		aria-labelledby="tab4">
+		<section class="gridCardWrapper">
+		<?php while (have_rows('grid_card_loop_thursday')) : the_row();
+
+			// vars
+			$grid_card_item = get_sub_field('grid_card_item');
+			$grid_card_item_id = get_sub_field('grid_card_item_id');
+			$grid_card_item_img = get_sub_field('grid_card_item_img');
+			$grid_card_item_desc = get_sub_field('grid_card_item_desc');
+			$grid_card_item_link = get_sub_field('grid_card_item_link');
+			$grid_card_item_link_text = get_sub_field('grid_card_item_link_text');
+			$grid_card_item_time = get_sub_field('grid_card_item_time');
+			$grid_card_item_host = get_sub_field('grid_card_item_host');
+			$grid_card_item_prod = get_sub_field('grid_card_item_prod');
+			$grid_card_item_ampm = get_sub_field('grid_card_item_ampm');
+
+			?>
+			<div class="gridCardLoop" >
+
+					<div class="gridCardImg">
+
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
+					</div><!-- gridCardImg -->
+					<div class="gridContent">
+						<div class="gridCardItem">
+							<h3>
+								<?php echo $grid_card_item; ?>
+							</h3>
+							<h5>
+							<?php echo $grid_card_item_time; ?>
+							<span>
+							<?php echo $grid_card_item_ampm; ?>
+</span>
+							</h5>
+
+
+
+						</div> <!-- gridCardItem -->
+
+						<div class="gridCardItemLink">
+							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
+								<?php echo $grid_card_item_link_text; ?>
+</a>
+						</div>
+						<!-- gridCardItemLink -->
+
+					</div> <!-- gridContent -->
+					<amp-lightbox id="<?php echo $grid_card_item_id; ?>" [open]="showLightbox<?php echo $grid_card_item_id; ?>" layout="nodisplay" on="lightboxClose:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: false})">
+							<div class="gridCardDesc lightbox" role="button" tabindex="0" on="tap:<?php echo $grid_card_item_id; ?>.close">
+								<a class="closeX" role="button" on="tap:<?php echo $grid_card_item_id; ?>.close">X</a>
+							<div class="gridCardImgLightbox">
+
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
+					</div><!-- gridCardImgLightbox -->
+							<div class="showContent">
+								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
+							<h5>Produced by: <?php echo $grid_card_item_prod; ?> </h5>
+								<p>
+									<?php echo $grid_card_item_desc; ?>
+								</p>
+							</div>
+							<!-- <div class="ctaShow">
+								<button>
+									More Info
+								</button>
+							</div> -->
+							<!-- ctaShow -->
+
+
+							</div> <!-- gridCardDesc -->
+						</amp-lightbox><!-- id="$grid_card_item_id;" -->
+
+			</div><!-- gridCardLoop -->
+		<?php endwhile; ?>
+	</section> <!-- end .gridCardWrapper -->
+	 </div><!-- tabpanel4 -->
 	<div id="tab5"
 		role="tab"
 		aria-controls="tabpanel5"
 		option>Friday</div>
 	<div id="tabpanel5"
 		role="tabpanel"
-		aria-labelledby="tab5">Friday content... </div>
+		aria-labelledby="tab5">
+		<section class="gridCardWrapper">
+		<?php while (have_rows('grid_card_loop_friday')) : the_row();
+
+			// vars
+			$grid_card_item = get_sub_field('grid_card_item');
+			$grid_card_item_id = get_sub_field('grid_card_item_id');
+			$grid_card_item_img = get_sub_field('grid_card_item_img');
+			$grid_card_item_desc = get_sub_field('grid_card_item_desc');
+			$grid_card_item_link = get_sub_field('grid_card_item_link');
+			$grid_card_item_link_text = get_sub_field('grid_card_item_link_text');
+			$grid_card_item_time = get_sub_field('grid_card_item_time');
+			$grid_card_item_host = get_sub_field('grid_card_item_host');
+			$grid_card_item_prod = get_sub_field('grid_card_item_prod');
+			$grid_card_item_ampm = get_sub_field('grid_card_item_ampm');
+
+			?>
+			<div class="gridCardLoop" >
+
+					<div class="gridCardImg">
+
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
+					</div><!-- gridCardImg -->
+					<div class="gridContent">
+						<div class="gridCardItem">
+							<h3>
+								<?php echo $grid_card_item; ?>
+							</h3>
+							<h5>
+							<?php echo $grid_card_item_time; ?>
+							<span>
+							<?php echo $grid_card_item_ampm; ?>
+</span>
+							</h5>
+
+
+
+						</div> <!-- gridCardItem -->
+
+						<div class="gridCardItemLink">
+							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
+								<?php echo $grid_card_item_link_text; ?>
+</a>
+						</div>
+						<!-- gridCardItemLink -->
+
+					</div> <!-- gridContent -->
+					<amp-lightbox id="<?php echo $grid_card_item_id; ?>" [open]="showLightbox<?php echo $grid_card_item_id; ?>" layout="nodisplay" on="lightboxClose:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: false})">
+							<div class="gridCardDesc lightbox" role="button" tabindex="0" on="tap:<?php echo $grid_card_item_id; ?>.close">
+								<a class="closeX" role="button" on="tap:<?php echo $grid_card_item_id; ?>.close">X</a>
+							<div class="gridCardImgLightbox">
+
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
+					</div><!-- gridCardImgLightbox -->
+							<div class="showContent">
+								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
+							<h5>Produced by: <?php echo $grid_card_item_prod; ?> </h5>
+								<p>
+									<?php echo $grid_card_item_desc; ?>
+								</p>
+							</div>
+							<!-- <div class="ctaShow">
+								<button>
+									More Info
+								</button>
+							</div> -->
+							<!-- ctaShow -->
+
+
+							</div> <!-- gridCardDesc -->
+						</amp-lightbox><!-- id="$grid_card_item_id;" -->
+
+			</div><!-- gridCardLoop -->
+		<?php endwhile; ?>
+	</section> <!-- end .gridCardWrapper -->
+	</div><!-- tabpanel5 -->
 	<div id="tab6"
 		role="tab"
 		aria-controls="tabpanel6"
 		option>Saturday</div>
 	<div id="tabpanel6"
 		role="tabpanel"
-		aria-labelledby="tab7">Saturday content... </div>
+		aria-labelledby="tab6">
+		<section class="gridCardWrapper">
+		<?php while (have_rows('grid_card_loop_saturday')) : the_row();
+
+			// vars
+			$grid_card_item = get_sub_field('grid_card_item');
+			$grid_card_item_id = get_sub_field('grid_card_item_id');
+			$grid_card_item_img = get_sub_field('grid_card_item_img');
+			$grid_card_item_desc = get_sub_field('grid_card_item_desc');
+			$grid_card_item_link = get_sub_field('grid_card_item_link');
+			$grid_card_item_link_text = get_sub_field('grid_card_item_link_text');
+			$grid_card_item_time = get_sub_field('grid_card_item_time');
+			$grid_card_item_host = get_sub_field('grid_card_item_host');
+			$grid_card_item_prod = get_sub_field('grid_card_item_prod');
+			$grid_card_item_ampm = get_sub_field('grid_card_item_ampm');
+
+			?>
+			<div class="gridCardLoop" >
+
+					<div class="gridCardImg">
+
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
+					</div><!-- gridCardImg -->
+					<div class="gridContent">
+						<div class="gridCardItem">
+							<h3>
+								<?php echo $grid_card_item; ?>
+							</h3>
+							<h5>
+							<?php echo $grid_card_item_time; ?>
+							<span>
+							<?php echo $grid_card_item_ampm; ?>
+</span>
+							</h5>
+
+
+
+						</div> <!-- gridCardItem -->
+
+						<div class="gridCardItemLink">
+							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
+								<?php echo $grid_card_item_link_text; ?>
+</a>
+						</div>
+						<!-- gridCardItemLink -->
+
+					</div> <!-- gridContent -->
+					<amp-lightbox id="<?php echo $grid_card_item_id; ?>" [open]="showLightbox<?php echo $grid_card_item_id; ?>" layout="nodisplay" on="lightboxClose:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: false})">
+							<div class="gridCardDesc lightbox" role="button" tabindex="0" on="tap:<?php echo $grid_card_item_id; ?>.close">
+								<a class="closeX" role="button" on="tap:<?php echo $grid_card_item_id; ?>.close">X</a>
+							<div class="gridCardImgLightbox">
+
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
+					</div><!-- gridCardImgLightbox -->
+							<div class="showContent">
+								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
+							<h5>Produced by: <?php echo $grid_card_item_prod; ?> </h5>
+								<p>
+									<?php echo $grid_card_item_desc; ?>
+								</p>
+							</div>
+							<!-- <div class="ctaShow">
+								<button>
+									More Info
+								</button>
+							</div> -->
+							<!-- ctaShow -->
+
+
+							</div> <!-- gridCardDesc -->
+						</amp-lightbox><!-- id="$grid_card_item_id;" -->
+
+			</div><!-- gridCardLoop -->
+		<?php endwhile; ?>
+	</section> <!-- end .gridCardWrapper -->
+	</div><!-- tabpanel6 -->
 		<div id="tab7"
 		role="tab"
 		aria-controls="tabpanel7"
 		option>Sunday</div>
 	<div id="tabpanel7"
 		role="tabpanel"
-		aria-labelledby="tab7">Sunday content... </div>
+		aria-labelledby="tab7">
+		<section class="gridCardWrapper">
+		<?php while (have_rows('grid_card_loop_sunday')) : the_row();
+
+			// vars
+			$grid_card_item = get_sub_field('grid_card_item');
+			$grid_card_item_id = get_sub_field('grid_card_item_id');
+			$grid_card_item_img = get_sub_field('grid_card_item_img');
+			$grid_card_item_desc = get_sub_field('grid_card_item_desc');
+			$grid_card_item_link = get_sub_field('grid_card_item_link');
+			$grid_card_item_link_text = get_sub_field('grid_card_item_link_text');
+			$grid_card_item_time = get_sub_field('grid_card_item_time');
+			$grid_card_item_host = get_sub_field('grid_card_item_host');
+			$grid_card_item_prod = get_sub_field('grid_card_item_prod');
+			$grid_card_item_ampm = get_sub_field('grid_card_item_ampm');
+
+			?>
+			<div class="gridCardLoop" >
+
+					<div class="gridCardImg">
+
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
+					</div><!-- gridCardImg -->
+					<div class="gridContent">
+						<div class="gridCardItem">
+							<h3>
+								<?php echo $grid_card_item; ?>
+							</h3>
+							<h5>
+							<?php echo $grid_card_item_time; ?>
+							<span>
+							<?php echo $grid_card_item_ampm; ?>
+</span>
+							</h5>
+
+
+
+						</div> <!-- gridCardItem -->
+
+						<div class="gridCardItemLink">
+							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
+								<?php echo $grid_card_item_link_text; ?>
+</a>
+						</div>
+						<!-- gridCardItemLink -->
+
+					</div> <!-- gridContent -->
+					<amp-lightbox id="<?php echo $grid_card_item_id; ?>" [open]="showLightbox<?php echo $grid_card_item_id; ?>" layout="nodisplay" on="lightboxClose:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: false})">
+							<div class="gridCardDesc lightbox" role="button" tabindex="0" on="tap:<?php echo $grid_card_item_id; ?>.close">
+								<a class="closeX" role="button" on="tap:<?php echo $grid_card_item_id; ?>.close">X</a>
+							<div class="gridCardImgLightbox">
+
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
+					</div><!-- gridCardImgLightbox -->
+							<div class="showContent">
+								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
+							<h5>Produced by: <?php echo $grid_card_item_prod; ?> </h5>
+								<p>
+									<?php echo $grid_card_item_desc; ?>
+								</p>
+							</div>
+							<!-- <div class="ctaShow">
+								<button>
+									More Info
+								</button>
+							</div> -->
+							<!-- ctaShow -->
+
+
+							</div> <!-- gridCardDesc -->
+						</amp-lightbox><!-- id="$grid_card_item_id;" -->
+
+			</div><!-- gridCardLoop -->
+		<?php endwhile; ?>
+	</section> <!-- end .gridCardWrapper -->
+	</div><!-- tabpanel7 -->
 	</amp-selector>
 	<?php endwhile;  wp_reset_query(); ?>
 </div><!--programTabsWrapper -->

@@ -89,3 +89,25 @@
 
 }
 
+.programTabsWrapper {
+	& .gridCardWrapper {
+		grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+		grid-template-rows: 200px;
+		& .gridContent {
+			background: rgba(0,0,0,.6);
+
+			& .gridCardItem {
+				line-height: 1.2rem;
+			}
+		}
+		& h3 {
+			font-size: 1.2rem;
+		}
+		& h5 {
+			padding: 0;
+			margin: 0;
+			font-size: 1rem;
+		}
+	}
+}
+
