@@ -56,12 +56,13 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 
 <?php while( $listenliveloop->have_posts() ) : $listenliveloop->the_post();
 $listen_live_icon			= get_field('listen_live_icon');
+$listen_live_link			= get_field('listen_live_link');
 
 			?>
 
 	<div class="liveLink">
 
-		<a href="https://streamdb7web.securenetsystems.net/cirrusencore/KWVH">
+		<a href="<?php echo $listen_live_link; ?>" target="_blank" rel=”noopener noreferrer”>
 		<span>
 		Listen Live
 		</span>
