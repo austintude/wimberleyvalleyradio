@@ -107,7 +107,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 						</amp-lightbox><!-- id="$grid_card_item_id;" -->
 
 			</div><!-- gridCardLoop -->
-		<?php endwhile; ?>
+		<?php endwhile; wp_reset_query(); ?>
 	</section> <!-- end .gridCardWrapper -->
 </div><!-- tabpanel1 -->
 	<div id="tab2"
@@ -117,13 +117,13 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 	<div id="tabpanel2"
 		role="tabpanel"
 		aria-labelledby="tab2">
-		<section class="gridCardWrapper">
+		Í<section class="gridCardWrapper">
 		<?php while (have_rows('grid_card_loop_tuesday')) : the_row();
 
 			// vars
 			$grid_card_item = get_sub_field('grid_card_item');
 			$grid_card_item_id = get_sub_field('grid_card_item_id');
-			$grid_card_item_img2 = get_sub_field('grid_card_item_img2');
+			$grid_card_item_img = get_sub_field('grid_card_item_img');
 			$grid_card_item_desc = get_sub_field('grid_card_item_desc');
 			$grid_card_item_link = get_sub_field('grid_card_item_link');
 			$grid_card_item_link_text = get_sub_field('grid_card_item_link_text');
@@ -137,7 +137,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 					<div class="gridCardImg">
 
-						<img src="<?php echo $grid_card_item_img2['url']; ?>" alt="<?php echo $grid_card_item_img2['alt']; ?>" />
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
 					</div><!-- gridCardImg -->
 					<div class="gridContent">
 						<div class="gridCardItem">
@@ -154,14 +154,13 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 
 						</div> <!-- gridCardItem -->
-						<?php if ($grid_card_item_link_text != null) { ?>
+
 						<div class="gridCardItemLink">
 							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
 								<?php echo $grid_card_item_link_text; ?>
 </a>
 						</div>
 						<!-- gridCardItemLink -->
-						<?php } ?>
 
 					</div> <!-- gridContent -->
 					<amp-lightbox id="<?php echo $grid_card_item_id; ?>" [open]="showLightbox<?php echo $grid_card_item_id; ?>" layout="nodisplay" on="lightboxClose:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: false})">
@@ -169,7 +168,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 								<a class="closeX" role="button" on="tap:<?php echo $grid_card_item_id; ?>.close">X</a>
 							<div class="gridCardImgLightbox">
 
-						<img src="<?php echo $grid_card_item_img2['url']; ?>" alt="<?php echo $grid_card_item_img2['alt']; ?>" />
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
 					</div><!-- gridCardImgLightbox -->
 							<div class="showContent">
 								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
@@ -206,7 +205,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 			// vars
 			$grid_card_item = get_sub_field('grid_card_item');
 			$grid_card_item_id = get_sub_field('grid_card_item_id');
-			$grid_card_item_img3 = get_sub_field('grid_card_item_img3');
+			$grid_card_item_img = get_sub_field('grid_card_item_img');
 			$grid_card_item_desc = get_sub_field('grid_card_item_desc');
 			$grid_card_item_link = get_sub_field('grid_card_item_link');
 			$grid_card_item_link_text = get_sub_field('grid_card_item_link_text');
@@ -220,7 +219,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 					<div class="gridCardImg">
 
-						<img src="<?php echo $grid_card_item_img3['url']; ?>" alt="<?php echo $grid_card_item_img3['alt']; ?>" />
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
 					</div><!-- gridCardImg -->
 					<div class="gridContent">
 						<div class="gridCardItem">
@@ -237,14 +236,13 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 
 						</div> <!-- gridCardItem -->
-						<?php if ($grid_card_item_link_text != null) { ?>
+
 						<div class="gridCardItemLink">
 							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
 								<?php echo $grid_card_item_link_text; ?>
 </a>
 						</div>
 						<!-- gridCardItemLink -->
-						<?php } ?>
 
 					</div> <!-- gridContent -->
 					<amp-lightbox id="<?php echo $grid_card_item_id; ?>" [open]="showLightbox<?php echo $grid_card_item_id; ?>" layout="nodisplay" on="lightboxClose:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: false})">
@@ -252,7 +250,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 								<a class="closeX" role="button" on="tap:<?php echo $grid_card_item_id; ?>.close">X</a>
 							<div class="gridCardImgLightbox">
 
-						<img src="<?php echo $grid_card_item_img3['url']; ?>" alt="<?php echo $grid_card_item_img3['alt']; ?>" />
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
 					</div><!-- gridCardImgLightbox -->
 							<div class="showContent">
 								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
@@ -289,7 +287,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 			// vars
 			$grid_card_item = get_sub_field('grid_card_item');
 			$grid_card_item_id = get_sub_field('grid_card_item_id');
-			$grid_card_item_img4 = get_sub_field('grid_card_item_img4');
+			$grid_card_item_img = get_sub_field('grid_card_item_img');
 			$grid_card_item_desc = get_sub_field('grid_card_item_desc');
 			$grid_card_item_link = get_sub_field('grid_card_item_link');
 			$grid_card_item_link_text = get_sub_field('grid_card_item_link_text');
@@ -303,7 +301,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 					<div class="gridCardImg">
 
-						<img src="<?php echo $grid_card_item_img4['url']; ?>" alt="<?php echo $grid_card_item_img4['alt']; ?>" />
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
 					</div><!-- gridCardImg -->
 					<div class="gridContent">
 						<div class="gridCardItem">
@@ -320,14 +318,13 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 
 						</div> <!-- gridCardItem -->
-						<?php if ($grid_card_item_link_text != null) { ?>
+
 						<div class="gridCardItemLink">
 							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
 								<?php echo $grid_card_item_link_text; ?>
 </a>
 						</div>
 						<!-- gridCardItemLink -->
-						<?php } ?>
 
 					</div> <!-- gridContent -->
 					<amp-lightbox id="<?php echo $grid_card_item_id; ?>" [open]="showLightbox<?php echo $grid_card_item_id; ?>" layout="nodisplay" on="lightboxClose:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: false})">
@@ -335,7 +332,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 								<a class="closeX" role="button" on="tap:<?php echo $grid_card_item_id; ?>.close">X</a>
 							<div class="gridCardImgLightbox">
 
-						<img src="<?php echo $grid_card_item_img4['url']; ?>" alt="<?php echo $grid_card_item_img4['alt']; ?>" />
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
 					</div><!-- gridCardImgLightbox -->
 							<div class="showContent">
 								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
@@ -372,7 +369,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 			// vars
 			$grid_card_item = get_sub_field('grid_card_item');
 			$grid_card_item_id = get_sub_field('grid_card_item_id');
-			$grid_card_item_img5 = get_sub_field('grid_card_item_img5');
+			$grid_card_item_img = get_sub_field('grid_card_item_img');
 			$grid_card_item_desc = get_sub_field('grid_card_item_desc');
 			$grid_card_item_link = get_sub_field('grid_card_item_link');
 			$grid_card_item_link_text = get_sub_field('grid_card_item_link_text');
@@ -386,7 +383,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 					<div class="gridCardImg">
 
-						<img src="<?php echo $grid_card_item_img5['url']; ?>" alt="<?php echo $grid_card_item_img5['alt']; ?>" />
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
 					</div><!-- gridCardImg -->
 					<div class="gridContent">
 						<div class="gridCardItem">
@@ -403,14 +400,13 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 
 						</div> <!-- gridCardItem -->
-						<?php if ($grid_card_item_link_text != null) { ?>
+
 						<div class="gridCardItemLink">
 							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
 								<?php echo $grid_card_item_link_text; ?>
 </a>
 						</div>
 						<!-- gridCardItemLink -->
-						<?php } ?>
 
 					</div> <!-- gridContent -->
 					<amp-lightbox id="<?php echo $grid_card_item_id; ?>" [open]="showLightbox<?php echo $grid_card_item_id; ?>" layout="nodisplay" on="lightboxClose:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: false})">
@@ -418,7 +414,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 								<a class="closeX" role="button" on="tap:<?php echo $grid_card_item_id; ?>.close">X</a>
 							<div class="gridCardImgLightbox">
 
-						<img src="<?php echo $grid_card_item_img5['url']; ?>" alt="<?php echo $grid_card_item_img5['alt']; ?>" />
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
 					</div><!-- gridCardImgLightbox -->
 							<div class="showContent">
 								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
@@ -455,7 +451,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 			// vars
 			$grid_card_item = get_sub_field('grid_card_item');
 			$grid_card_item_id = get_sub_field('grid_card_item_id');
-			$grid_card_item_img6 = get_sub_field('grid_card_item_img6');
+			$grid_card_item_img = get_sub_field('grid_card_item_img');
 			$grid_card_item_desc = get_sub_field('grid_card_item_desc');
 			$grid_card_item_link = get_sub_field('grid_card_item_link');
 			$grid_card_item_link_text = get_sub_field('grid_card_item_link_text');
@@ -469,7 +465,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 					<div class="gridCardImg">
 
-						<img src="<?php echo $grid_card_item_img6['url']; ?>" alt="<?php echo $grid_card_item_img6['alt']; ?>" />
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
 					</div><!-- gridCardImg -->
 					<div class="gridContent">
 						<div class="gridCardItem">
@@ -486,14 +482,13 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 
 						</div> <!-- gridCardItem -->
-						<?php if ($grid_card_item_link_text != null) { ?>
+
 						<div class="gridCardItemLink">
 							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
 								<?php echo $grid_card_item_link_text; ?>
 </a>
 						</div>
 						<!-- gridCardItemLink -->
-						<?php } ?>
 
 					</div> <!-- gridContent -->
 					<amp-lightbox id="<?php echo $grid_card_item_id; ?>" [open]="showLightbox<?php echo $grid_card_item_id; ?>" layout="nodisplay" on="lightboxClose:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: false})">
@@ -501,7 +496,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 								<a class="closeX" role="button" on="tap:<?php echo $grid_card_item_id; ?>.close">X</a>
 							<div class="gridCardImgLightbox">
 
-						<img src="<?php echo $grid_card_item_img6['url']; ?>" alt="<?php echo $grid_card_item_img6['alt']; ?>" />
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
 					</div><!-- gridCardImgLightbox -->
 							<div class="showContent">
 								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
@@ -538,7 +533,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 			// vars
 			$grid_card_item = get_sub_field('grid_card_item');
 			$grid_card_item_id = get_sub_field('grid_card_item_id');
-			$grid_card_item_img7 = get_sub_field('grid_card_item_img7');
+			$grid_card_item_img = get_sub_field('grid_card_item_img');
 			$grid_card_item_desc = get_sub_field('grid_card_item_desc');
 			$grid_card_item_link = get_sub_field('grid_card_item_link');
 			$grid_card_item_link_text = get_sub_field('grid_card_item_link_text');
@@ -552,7 +547,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 					<div class="gridCardImg">
 
-						<img src="<?php echo $grid_card_item_img7['url']; ?>" alt="<?php echo $grid_card_item_img7['alt']; ?>" />
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
 					</div><!-- gridCardImg -->
 					<div class="gridContent">
 						<div class="gridCardItem">
@@ -569,14 +564,13 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 
 						</div> <!-- gridCardItem -->
-						<?php if ($grid_card_item_link_text != null) { ?>
+
 						<div class="gridCardItemLink">
 							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
 								<?php echo $grid_card_item_link_text; ?>
 </a>
 						</div>
 						<!-- gridCardItemLink -->
-						<?php } ?>
 
 					</div> <!-- gridContent -->
 					<amp-lightbox id="<?php echo $grid_card_item_id; ?>" [open]="showLightbox<?php echo $grid_card_item_id; ?>" layout="nodisplay" on="lightboxClose:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: false})">
@@ -584,7 +578,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 								<a class="closeX" role="button" on="tap:<?php echo $grid_card_item_id; ?>.close">X</a>
 							<div class="gridCardImgLightbox">
 
-						<img src="<?php echo $grid_card_item_img7['url']; ?>" alt="<?php echo $grid_card_item_img7['alt']; ?>" />
+						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
 					</div><!-- gridCardImgLightbox -->
 							<div class="showContent">
 								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
