@@ -11,10 +11,10 @@ namespace WP_Rig\WP_Rig;
 ?>
 
 <div class="programTabsWrapper">
-	<h2>Weekly Programing at KWVH</h2>
-	<?php $programs = new \WP_Query( array( 'post_type' => 'programs', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+<?php $programs = new \WP_Query( array( 'post_type' => 'programs', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 <?php while( $programs->have_posts() ) : $programs->the_post();
+$programming_lineup		= get_field('programming_lineup');
 $grid_card_loop_monday		= get_field('grid_card_loop_monday');
 $grid_card_loop_tuesday		= get_field('grid_card_loop_tuesday');
 $grid_card_loop_wednesday		= get_field('grid_card_loop_wednesday');
@@ -23,6 +23,10 @@ $grid_card_loop_friday		= get_field('grid_card_loop_friday');
 $grid_card_loop_saturday		= get_field('grid_card_loop_saturday');
 $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 ?>
+	<h2>
+	<?php echo $programming_lineup; ?>
+	</h2>
+
 	<amp-selector class="tabs-with-flex"
 	role="tablist">
 	<div id="tab1"
@@ -88,13 +92,19 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 						<img src="<?php echo $grid_card_item_img['url']; ?>" alt="<?php echo $grid_card_item_img['alt']; ?>" />
 					</div><!-- gridCardImgLightbox -->
-							<div class="showContent">
+					<div class="showContent">
+							<?php if ($grid_card_item_host != null) { ?>
 								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
+								<?php } ?>
+								<?php if ($grid_card_item_prod != null) { ?>
 							<h5>Produced by: <?php echo $grid_card_item_prod; ?> </h5>
+							<?php } ?>
+							<?php if ($grid_card_item_desc != null) { ?>
 								<p>
 									<?php echo $grid_card_item_desc; ?>
 								</p>
-							</div>
+								<?php } ?>
+							</div><!-- showContent -->
 							<!-- <div class="ctaShow">
 								<button>
 									More Info
@@ -171,13 +181,19 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 						<img src="<?php echo $grid_card_item_img2['url']; ?>" alt="<?php echo $grid_card_item_img2['alt']; ?>" />
 					</div><!-- gridCardImgLightbox -->
-							<div class="showContent">
+					<div class="showContent">
+							<?php if ($grid_card_item_host != null) { ?>
 								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
+								<?php } ?>
+								<?php if ($grid_card_item_prod != null) { ?>
 							<h5>Produced by: <?php echo $grid_card_item_prod; ?> </h5>
+							<?php } ?>
+							<?php if ($grid_card_item_desc != null) { ?>
 								<p>
 									<?php echo $grid_card_item_desc; ?>
 								</p>
-							</div>
+								<?php } ?>
+							</div><!-- showContent -->
 							<!-- <div class="ctaShow">
 								<button>
 									More Info
@@ -254,13 +270,19 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 						<img src="<?php echo $grid_card_item_img3['url']; ?>" alt="<?php echo $grid_card_item_img3['alt']; ?>" />
 					</div><!-- gridCardImgLightbox -->
-							<div class="showContent">
+					<div class="showContent">
+							<?php if ($grid_card_item_host != null) { ?>
 								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
+								<?php } ?>
+								<?php if ($grid_card_item_prod != null) { ?>
 							<h5>Produced by: <?php echo $grid_card_item_prod; ?> </h5>
+							<?php } ?>
+							<?php if ($grid_card_item_desc != null) { ?>
 								<p>
 									<?php echo $grid_card_item_desc; ?>
 								</p>
-							</div>
+								<?php } ?>
+							</div><!-- showContent -->
 							<!-- <div class="ctaShow">
 								<button>
 									More Info
@@ -337,13 +359,19 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 						<img src="<?php echo $grid_card_item_img4['url']; ?>" alt="<?php echo $grid_card_item_img4['alt']; ?>" />
 					</div><!-- gridCardImgLightbox -->
-							<div class="showContent">
+					<div class="showContent">
+							<?php if ($grid_card_item_host != null) { ?>
 								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
+								<?php } ?>
+								<?php if ($grid_card_item_prod != null) { ?>
 							<h5>Produced by: <?php echo $grid_card_item_prod; ?> </h5>
+							<?php } ?>
+							<?php if ($grid_card_item_desc != null) { ?>
 								<p>
 									<?php echo $grid_card_item_desc; ?>
 								</p>
-							</div>
+								<?php } ?>
+							</div><!-- showContent -->
 							<!-- <div class="ctaShow">
 								<button>
 									More Info
@@ -420,13 +448,19 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 						<img src="<?php echo $grid_card_item_img5['url']; ?>" alt="<?php echo $grid_card_item_img5['alt']; ?>" />
 					</div><!-- gridCardImgLightbox -->
-							<div class="showContent">
+					<div class="showContent">
+							<?php if ($grid_card_item_host != null) { ?>
 								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
+								<?php } ?>
+								<?php if ($grid_card_item_prod != null) { ?>
 							<h5>Produced by: <?php echo $grid_card_item_prod; ?> </h5>
+							<?php } ?>
+							<?php if ($grid_card_item_desc != null) { ?>
 								<p>
 									<?php echo $grid_card_item_desc; ?>
 								</p>
-							</div>
+								<?php } ?>
+							</div><!-- showContent -->
 							<!-- <div class="ctaShow">
 								<button>
 									More Info
@@ -504,12 +538,18 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 						<img src="<?php echo $grid_card_item_img6['url']; ?>" alt="<?php echo $grid_card_item_img6['alt']; ?>" />
 					</div><!-- gridCardImgLightbox -->
 							<div class="showContent">
+							<?php if ($grid_card_item_host != null) { ?>
 								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
+								<?php } ?>
+								<?php if ($grid_card_item_prod != null) { ?>
 							<h5>Produced by: <?php echo $grid_card_item_prod; ?> </h5>
+							<?php } ?>
+							<?php if ($grid_card_item_desc != null) { ?>
 								<p>
 									<?php echo $grid_card_item_desc; ?>
 								</p>
-							</div>
+								<?php } ?>
+							</div><!-- showContent -->
 							<!-- <div class="ctaShow">
 								<button>
 									More Info
@@ -586,13 +626,19 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 
 						<img src="<?php echo $grid_card_item_img7['url']; ?>" alt="<?php echo $grid_card_item_img7['alt']; ?>" />
 					</div><!-- gridCardImgLightbox -->
-							<div class="showContent">
+					<div class="showContent">
+							<?php if ($grid_card_item_host != null) { ?>
 								<h4>Hosted by: <?php echo $grid_card_item_host; ?></h4>
+								<?php } ?>
+								<?php if ($grid_card_item_prod != null) { ?>
 							<h5>Produced by: <?php echo $grid_card_item_prod; ?> </h5>
+							<?php } ?>
+							<?php if ($grid_card_item_desc != null) { ?>
 								<p>
 									<?php echo $grid_card_item_desc; ?>
 								</p>
-							</div>
+								<?php } ?>
+							</div><!-- showContent -->
 							<!-- <div class="ctaShow">
 								<button>
 									More Info
