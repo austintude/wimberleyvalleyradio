@@ -18,6 +18,7 @@
 	@media (--content-query) {
 	position: absolute;
 	top: 0rem;
+	left: -7rem;
 	}
 }
 
