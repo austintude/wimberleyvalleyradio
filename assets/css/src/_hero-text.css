@@ -91,10 +91,13 @@ h1.callNumberBackground {
 	@media (--content-query) {
 		grid-template-columns: 1fr;
 		grid-template-columns: 1fr;
-    grid-template-rows: 10rem;
+    grid-template-rows: 6rem;
     top: 5rem;
 	position: relative;
 	font-size: 2rem;
+	}
+	& button {
+		font-size: 1.5rem;
 	}
 }
 .donateNow button {
