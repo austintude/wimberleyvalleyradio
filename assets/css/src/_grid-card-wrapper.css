@@ -92,7 +92,7 @@
 .programTabsWrapper {
 	& .gridCardWrapper {
 		grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-		grid-template-rows: 200px;
+		grid-template-rows: 1fr;
 		& .gridContent {
 			background: rgba(0,0,0,.6);
 
