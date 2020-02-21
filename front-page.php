@@ -51,8 +51,11 @@ if ( is_home() ) {
 			get_template_part( 'template-parts/content/blockc' );
 		} ?>
 			<?php endwhile;  wp_reset_query(); ?>
+			<?php
+			get_template_part( 'template-parts/content/block3a' );
+		?>
 		<?php
-			get_template_part( 'template-parts/content/block3' );
+			get_template_part( 'template-parts/content/block3b' );
 		?>
 		<?php while( $miscblockloop->have_posts() ) : $miscblockloop->the_post();
 			$blockd			= get_field('blockd');

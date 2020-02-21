@@ -1,0 +1,33 @@
+
+	.block3a .sectionCardsBlock {
+
+	& .sectionCard {
+		display: grid;
+grid-template-columns: 1fr;
+text-align: left;
+		& button {
+			background: #607D8A;
+		}
+		& h3 {
+			font-size: 1.2rem;
+			font-weight: 300;
+			text-align: center;
+		}
+
+		& p {
+			font-size: 1.1rem;
+		}
+		@media (--wide-screen-query) {
+		align-self: stretch;
+		}
+		@media (--content-query) {
+			grid-template-columns: 1fr 1fr;
+
+		}
+		& .petInfo {
+			padding: 0 1rem;
+		}
+	}
+
+}
+

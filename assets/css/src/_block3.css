@@ -2,9 +2,8 @@
 	display: flex;
 	flex-direction: column;
 	background: #fff;
-	margin: 0;
 	text-align: center;
-	padding: 2rem 0 3rem;
+	padding: 2rem 3rem 3rem;
 	& .ctaButton {
 		/* color: #282828;
 		border-color: rgba(0,0,0,0);
