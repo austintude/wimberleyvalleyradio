@@ -24,13 +24,7 @@ if ( is_home() ) {
 	<main id="primary" class="site-main">
 	<?php $miscblockloop = new \WP_Query( array( 'post_type' => 'miscblockloop', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
-<?php while( $miscblockloop->have_posts() ) : $miscblockloop->the_post();
-			$blocka			= get_field('blocka');
-			?>
-		<?php if ($blocka != null) {
-			get_template_part( 'template-parts/content/blocka' );
-		} ?>
-			<?php endwhile;  wp_reset_query(); ?>
+
 		<?php
 			get_template_part( 'template-parts/content/block1' );
 		?>
@@ -39,6 +33,13 @@ if ( is_home() ) {
 			?>
 		<?php if ($blockb != null) {
 			get_template_part( 'template-parts/content/blockb' );
+		} ?>
+			<?php endwhile;  wp_reset_query(); ?>
+			<?php while( $miscblockloop->have_posts() ) : $miscblockloop->the_post();
+			$blocka			= get_field('blocka');
+			?>
+		<?php if ($blocka != null) {
+			get_template_part( 'template-parts/content/blocka' );
 		} ?>
 			<?php endwhile;  wp_reset_query(); ?>
 		<?php

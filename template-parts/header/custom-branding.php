@@ -14,7 +14,7 @@ namespace WP_Rig\WP_Rig;
 	&nbsp;
 </div>
 <?php the_custom_logo(); ?>
-<div id="carouselHero" amp-fx="parallax" data-parallax-factor="1.2">
+<div id="carouselHero">
 
 	<div>
 

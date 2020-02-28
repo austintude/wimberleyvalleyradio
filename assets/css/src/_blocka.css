@@ -1,0 +1,15 @@
+.blocka {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	display: grid;
+	margin-top: 3rem;
+	margin-bottom: -3rem;
+	/* background: rgba(0,0,0,.95); */
+	padding: 3rem 0;
+	@media (--sidebar-query) {
+		margin-top: 12rem;
+
+	}
+
+}

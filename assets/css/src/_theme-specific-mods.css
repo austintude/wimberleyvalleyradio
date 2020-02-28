@@ -50,7 +50,9 @@
 		& img {
 		display: block;
 		margin: 0 auto;
-		margin-top: -11rem;
+		margin-top: -4rem;
+		}
+		@media (--sidebar-query) {
 		max-height: 41rem;
 		/* opacity: .7; */
 	}
@@ -111,14 +113,17 @@
 		z-index: 2;
 		max-height: 7rem;
 		@media (--content-query) {
-		max-height: 19rem;
+		max-height: 14rem;
+		}
+		@media (--sidebar-query) {
+			max-height: 19rem;
 		}
 	}
 	@media (--content-query) {
 		/* margin-top: -18rem; */
 		grid-template-columns: 3fr 1fr;
 		margin-top: auto;
-    top: 6rem;
+    top: 3rem;
 	position: absolute;
 	text-align: left;
 	}
@@ -126,7 +131,7 @@
 		/* margin-top: -30rem; */
 		margin-top: 0;
 		position: absolute;
-		top: 0;
+		top: 6rem;
 	}
 	& .site-title {
 		top: 3rem;
@@ -447,7 +452,7 @@ figcaption {
 	left: 1.3em;
 	z-index: 6;
 	@media (--content-query) {
-		width: 3em;
+		width: 5.65em;
 	}
 }
 footer .custom-logo {
@@ -480,7 +485,7 @@ footer .custom-logo {
 }
 
 #mobileTopBar {
-	height: 3.55rem;
+	height: 3.75rem;
 	position: fixed;
 	top: 0;
 	width: 100vw;
