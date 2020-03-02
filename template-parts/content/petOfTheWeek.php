@@ -50,8 +50,9 @@ namespace WP_Rig\WP_Rig;
 						<?php echo $pet_desc; ?>
 
 						<div class="petCTA">
-						<button href="<?php echo $pet_cta_link; ?>" rel="norefferer" target="_blank">
+						<button ><a href="<?php echo $pet_cta_link; ?>" rel="norefferer" target="_blank">
 							<?php echo $pet_cta_text; ?> <?php echo $pets_name; ?>
+							</a>
 </button>
 						</div><!-- petCTA -->
 					</div><!-- petInfo -->

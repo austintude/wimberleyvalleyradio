@@ -46,7 +46,7 @@ $donate_link			= get_field('donate_link');
 			?>
 		<div class="listenLive">
 			<button>
-				<a href="<?php echo $listen_live_link; ?>" target="_blank" rel="noreferrer”>
+				<a href="<?php echo $listen_live_link; ?>" target="_blank" rel=”noreferrer”>
 			<?php echo $listen_live_tx; ?>
 </a>
 			<!-- <img src="<?php echo $listen_live_icon['url']; ?>" alt="<?php echo $listen_live_icon['alt']; ?>"/> -->
