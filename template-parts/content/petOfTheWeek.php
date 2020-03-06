@@ -15,7 +15,7 @@ namespace WP_Rig\WP_Rig;
 
                     <div class="sectionCardsBlock">
 
-					<?php $pet_of_the_week = new \WP_Query( array( 'post_type' => 'pet_of_the_week', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+					<?php $pet_of_the_week = new \WP_Query( array( 'post_type' => 'pet_of_the_week', 'orderby' => 'post_id', 'order' => 'DESC' ) ); ?>
 
 <?php while( $pet_of_the_week->have_posts() ) : $pet_of_the_week->the_post();
 			$pow_title			= get_field('pow_title');

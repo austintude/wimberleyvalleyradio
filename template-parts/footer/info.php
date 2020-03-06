@@ -117,7 +117,7 @@ $contact_us_phone			= get_field('contact_us_phone');
 			<a href="<?php echo $facebook_link; ?>">
 			<amp-img
 				src="<?php echo $facebook_icon['url']; ?>"
-				width="3"
+				width="5"
 				height="5"
 				layout="responsive"
 				alt="<?php echo $facebook_icon['alt']; ?>">
@@ -128,7 +128,7 @@ $contact_us_phone			= get_field('contact_us_phone');
 		<a href="<?php echo $instagram_link; ?>" rel="noopener" target="_blank">
 		<amp-img
 				src="<?php echo $instagram_icon['url']; ?>"
-				width="3"
+				width="5"
 				height="5"
 				layout="responsive"
 				alt="<?php echo $instagram_icon['alt']; ?>">
@@ -139,7 +139,7 @@ $contact_us_phone			= get_field('contact_us_phone');
 		<a href="<?php echo $linkedin_link; ?>" rel="noopener" target="_blank">
 			<amp-img
 				src="<?php echo $linkedin_icon['url']; ?>"
-				width="3"
+				width="5"
 				height="5"
 				layout="responsive"
 				alt="<?php echo $linkedin_icon['alt']; ?>">

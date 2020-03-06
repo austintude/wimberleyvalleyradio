@@ -4,7 +4,10 @@
 	grid-gap: 1rem;
 	margin: auto 2vw auto auto;
 	width: 96vw;
+	grid-template-columns: 1fr;
+	@media (--content-query) {
 	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	}
 	& .sectionCard {
 		text-align: center;
 		font-weight: 300;
