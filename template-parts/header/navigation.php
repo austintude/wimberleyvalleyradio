@@ -62,7 +62,7 @@ $listen_live_link			= get_field('listen_live_link');
 
 	<div class="liveLink">
 
-		<a href="<?php echo $listen_live_link; ?>" target="_blank" rel="noreferrer”>
+		<a href="<?php echo $listen_live_link; ?>" target="_blank" rel="noreferrer">
 		<span>
 		Listen Live
 		</span>
