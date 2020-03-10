@@ -5,7 +5,7 @@
 	margin: auto 2vw auto auto;
 	width: 96vw;
 	grid-template-columns: 1fr;
-	@media (--content-query) {
+	@media (--sidebar-query) {
 	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 	}
 	& .sectionCard {

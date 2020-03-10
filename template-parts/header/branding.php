@@ -42,6 +42,8 @@ $listen_live_tx			= get_field('listen_live_tx');
 $listen_live_link			= get_field('listen_live_link');
 $donate_txt			= get_field('donate_txt');
 $donate_link			= get_field('donate_link');
+$listen_live_x			= get_field('listen_live_x');
+$listen_live_link			= get_field('listen_live_x_link');
 
 			?>
 		<div class="listenLive">
@@ -49,7 +51,13 @@ $donate_link			= get_field('donate_link');
 				<a href="<?php echo $listen_live_link; ?>" target="_blank" rel=”noreferrer”>
 			<?php echo $listen_live_tx; ?>
 </a>
-			<!-- <img src="<?php echo $listen_live_icon['url']; ?>" alt="<?php echo $listen_live_icon['alt']; ?>"/> -->
+			</button>
+			</div><!-- listenLive -->
+			<div class="listenLive kwvhX">
+			<button>
+				<a href="<?php echo $listen_live_x_link; ?>" target="_blank" rel=”noreferrer”>
+			<?php echo $listen_live_x; ?>
+</a>
 			</button>
 
 </div><!-- listenLive -->
