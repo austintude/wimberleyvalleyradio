@@ -43,7 +43,8 @@ $listen_live_link			= get_field('listen_live_link');
 $donate_txt			= get_field('donate_txt');
 $donate_link			= get_field('donate_link');
 $listen_live_x			= get_field('listen_live_x');
-$listen_live_link			= get_field('listen_live_x_link');
+$listen_live_x_link			= get_field('listen_live_x_link');
+$listen_live_x_onoff			= get_field('listen_live_x_onoff');
 
 			?>
 		<div class="listenLive">
@@ -53,6 +54,7 @@ $listen_live_link			= get_field('listen_live_x_link');
 </a>
 			</button>
 			</div><!-- listenLive -->
+			<?php if ($listen_live_x_onoff == 1) { ?>
 			<div class="listenLive kwvhX">
 			<button>
 				<a href="<?php echo $listen_live_x_link; ?>" target="_blank" rel=”noreferrer”>
@@ -61,6 +63,7 @@ $listen_live_link			= get_field('listen_live_x_link');
 			</button>
 
 </div><!-- listenLive -->
+			<?php } ?>
 <?php endwhile;  wp_reset_query(); ?>
 
 <div class="donateNow">

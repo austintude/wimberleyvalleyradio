@@ -85,9 +85,9 @@ h1.callNumberBackground {
 }
 .heroButtons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-left: auto;
-	margin-right: auto;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    /* margin-left: auto;
+	margin-right: auto; */
 	@media (--content-query) {
 		grid-template-columns: 1fr;
 		grid-template-columns: 1fr;
@@ -97,14 +97,18 @@ h1.callNumberBackground {
 	font-size: 2rem;
 	}
 	& button {
-		font-size: 1.5rem;
+		font-size: 1rem;
+		@media (--content-query) {
+			font-size: 1.5rem;
+		}
 	}
 }
 .donateNow button {
     background: #CF070C;
 }
 
-.listenLive button {
+.listenLive {
+	& button {
     color: #333;
 	background: #F7B722;
 	& img {
@@ -112,7 +116,9 @@ h1.callNumberBackground {
 		align-self: center;
 	justify-self: center;
 		}
+	}
+
 }
-.liveLink.kwvhX button {
+.listenLive.kwvhX button {
 	background: #1a06ca;
 }
