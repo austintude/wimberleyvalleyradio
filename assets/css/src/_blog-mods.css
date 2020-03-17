@@ -37,5 +37,17 @@
 		display: grid;
 		grid-column: 1;
 	}
+	@media (--narrow-content-menu-query) {
+	& .heroText {
+		display: grid;
+		grid-template-columns: 1fr;
+		margin: 2rem 0 0;
+		left: 0;
+		position: relative;
+	}
+	& .site-branding .site-title {
+		font-size: 3rem;
+	}
+}
 }
 
