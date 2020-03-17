@@ -14,3 +14,28 @@
 		}
 	}
 }
+
+.blog,
+.single,
+.archive {
+	& .site-branding .site-title {
+		font-size: 4rem;
+		@media (--sidebar-query) {
+			font-size: 7rem;
+		}
+	}
+	& main {
+		display: grid;
+		@media (--content-query) {
+	grid-template-columns: 3fr 1fr;
+}
+		& a {
+	color: #008000;
+	}
+}
+	& article {
+		display: grid;
+		grid-column: 1;
+	}
+}
+

@@ -13,5 +13,5 @@ if ( ! has_header_image() ) {
 
 ?>
 <figure class="header-image">
-	<?php the_post_thumbnail(); ?>
+<?php the_header_image_tag(); ?>
 </figure><!-- .header-image -->
