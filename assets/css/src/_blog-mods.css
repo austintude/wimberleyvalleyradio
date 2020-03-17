@@ -28,6 +28,18 @@
 		display: grid;
 		@media (--content-query) {
 	grid-template-columns: 3fr 1fr;
+
+	& nav {
+		grid-column: 2;
+		grid-row: 2;
+	}
+	& div#comments {
+		grid-column: 1;
+	}
+	& aside {
+		grid-column: 2;
+		grid-row: 1;
+	}
 }
 		& a {
 	color: #008000;
@@ -48,6 +60,20 @@
 	& .site-branding .site-title {
 		font-size: 3rem;
 	}
+
 }
+
+& .comments-area,
+	& .entry-footer,
+	& .entry-header,
+	& .post-navigation {
+		width: 90%;
+		padding: 0;
+		@media (--content-query) {
+		margin: 1.5em auto;
+		max-width: var(--content-width);
+		}
+	}
+
 }
 

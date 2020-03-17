@@ -29,7 +29,16 @@ if( have_rows('blocka') ):
 			$block_cta_link			= get_sub_field('block_cta_link');
 
 ?>
-<a href="<?php echo $block_cta_link; ?>" rel="noreferrer" target="_blank">
+<h2>
+<?php echo $block_title; ?>
+		</h2>
+		<h3>
+		<?php echo $block_subtitle; ?>
+		</h3>
+		<a href="<?php echo $block_cta_link; ?>">
+		<button><?php echo $block_cta_text; ?></button>
+		</a>
+<a href="<?php echo $block_cta_link; ?>">
 <img src="<?php echo $block_img['url']; ?>"
 			alt="<?php echo $block_img['alt']; ?>">
 </a>
