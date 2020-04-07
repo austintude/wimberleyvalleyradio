@@ -20,6 +20,9 @@ section.covid19 {
 	& button {
 		background: #008000;
 		margin-bottom: 2rem;
+		max-width: 70vw;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	@media (--sidebar-query) {
