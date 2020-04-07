@@ -1,0 +1,30 @@
+section.covid19 {
+	display: grid;
+	grid-template-columns: 1fr;
+	@media (--content-query) {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 2rem;
+	}
+}
+.blocka,
+.blockb {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	display: grid;
+	margin-top: 3rem;
+	margin-bottom: -3rem;
+	/* background: rgba(0,0,0,.95); */
+	padding: 3rem 0;
+
+	& button {
+		background: #008000;
+		margin-bottom: 2rem;
+	}
+
+	@media (--sidebar-query) {
+		margin-top: 12rem;
+
+	}
+
+}

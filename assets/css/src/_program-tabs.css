@@ -1,0 +1,117 @@
+ /* Styles for the flex layout based tabs */
+ amp-selector[role=tablist].tabs-with-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+amp-selector[role=tablist].tabs-with-flex [role=tab] {
+	flex-grow: 1;
+	/* custom styling, feel free to change */
+	text-align: center;
+	padding: var(--space-1);
+}
+amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
+	outline: none;
+	/* custom styling, feel free to change */
+	border-bottom: 2px solid var(--color-primary);
+}
+amp-selector[role=tablist].tabs-with-flex [role=tabpanel] {
+	display: none;
+	width: 100%;
+	order: 1; /* must be greater than the order of the tab buttons to flex to the next line */
+	/* custom styling, feel free to change */
+	padding: var(--space-4);
+}
+amp-selector[role=tablist].tabs-with-flex [role=tab][selected] + [role=tabpanel] {
+	display: block;
+}
+
+/* Styles for the selector based tabs */
+amp-selector[role=tablist].tabs-with-selector {
+	display: flex;
+}
+amp-selector[role=tablist].tabs-with-selector [role=tab][selected] {
+	outline: none;
+	/* custom styling, feel free to change */
+	border-bottom: 2px solid var(--color-primary);
+}
+amp-selector[role=tablist].tabs-with-selector {
+	display: flex;
+}
+amp-selector[role=tablist].tabs-with-selector [role=tab] {
+  /* custom styling, feel free to change */
+  width: 100%;
+  text-align: center;
+  padding: var(--space-1);
+}
+amp-selector.tabpanels [role=tabpanel] {
+  display: none;
+  /* custom styling, feel free to change */
+  padding: var(--space-4);
+}
+amp-selector.tabpanels [role=tabpanel][selected] {
+  outline: none;
+  display: block;
+}
+amp-selector[role=tablist] [role=tab][selected] + [role=tabpanel] {
+	display: block;
+  }
+
+  [role=tab] {
+    background: #F7B722;
+    margin: .3rem .5rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+amp-lightbox {
+	background: rgba(0,0,0,.5);
+	& .gridCardDesc.lightbox {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 200px;
+		grid-gap: 0.3rem;
+		@media (--content-query) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-gap: 1rem;
+		}
+		position: relative;
+		padding-top: 6rem;
+
+		& .gridCardImgLightbox amp-img {
+			max-width: 50vw;
+
+			@media (--content-query) {
+				max-width: auto;
+			}
+		}
+
+	& a.closeX {
+		position: absolute;
+		right: 5vw;
+		top: 12vh;
+	}
+	& .gridCardImgLightbox {
+		@media (--content-query) {
+		grid-column: 2;
+		}
+	}
+	& .showContent {
+	color: #fff;
+	margin-top: -10rem;
+	& p {
+		font-size: 0.8rem;
+	}
+	@media (--content-query) {
+	grid-column: 3;
+	margin-top: 0;
+	}
+}
+& .ctaShow {
+	@media (--content-query) {
+	grid-column: 2/3;
+	grid-row: 2;
+	}
+}
+	}
+}

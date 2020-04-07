@@ -14,7 +14,7 @@
 
 namespace WP_Rig\WP_Rig;
 
-get_header();
+get_header('custom-blog');
 
 wp_rig()->print_styles( 'wp-rig-content' );
 
@@ -38,6 +38,9 @@ wp_rig()->print_styles( 'wp-rig-content' );
 			get_template_part( 'template-parts/content/error' );
 		}
 		?>
+		<?php
+get_sidebar();
+?>
 	</main><!-- #primary -->
 <?php
 get_sidebar();

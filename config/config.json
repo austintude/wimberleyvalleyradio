@@ -1,1 +1,16 @@
-{}
+{
+  "theme": {
+      "slug": "wimberleyvalleyradio",
+      "name": "Wimberley Valley Radio",
+      "author": "Daniel Bisett",
+      "PHPNamespace": "WP_Rig\\WP_Rig"
+    },
+    "dev": {
+      "browserSync": {
+        "live": true,
+        "proxyURL": "kwvh.local",
+        "bypassPort": "8181",
+        "https": false
+      }
+}
+}

@@ -1,0 +1,113 @@
+.gridCardWrapper {
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-template-rows: 438px;
+    grid-gap: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+	width: 90vw;
+
+	& .gridCardLoop {
+		padding: 1rem;
+		border-radius: 1rem;
+		background: #fff;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		/* grid-template-rows: 1fr 1fr 1fr; */
+		& a {
+			text-decoration: none;
+			color: rgb(255,99,71);
+			font-weight: 700;
+
+		}
+		& a:hover {
+			color: #fff;
+		}
+		& .gridCardImg {
+			grid-column: 1/4;
+			grid-row: 1/4;
+			z-index: 1;
+
+			& img {
+				z-index: 1;
+				max-height: 100%;
+			}
+		}
+		& .gridContent {
+			grid-column: 1/4;
+			grid-row: 3/3;
+			align-self: stretch;
+			/* max-height: 7rem; */
+			background: rgba(0,0,0,.8);
+			display: grid;
+			z-index: 2;
+			color: #fff;
+			padding: 0 0.5rem;
+			/* overflow: hidden; */
+
+			& .gridCardItem {
+				font-size: 2rem;
+				text-transform: uppercase;
+    display: grid;
+    /* height: 95px; */
+			}
+
+			& .gridCardDesc {
+				font-size: 1.3rem;
+				display: none;
+			}
+			& .gridCardItemLink {
+				border: 1px solid rgb(255,99,71);
+				background: #f7f7f7;
+				display: none;
+				align-self: center;
+			}
+			& .gridCardItemLink:hover {
+				color: #fff;
+				background: rgb(255,99,71);
+				& a {
+					color: #fff;
+				}
+			}
+
+		}
+
+	}
+
+	& .gridCardLoop:hover {
+		& .gridContent {
+			/* margin-top: -320px;
+			height: 400px; */
+			grid-row: 1/4;
+			align-self: stretch;
+			& .gridCardDesc,
+			& .gridCardItemLink {
+				display: block;
+			}
+		}
+	}
+
+}
+
+.programTabsWrapper {
+	& .gridCardWrapper {
+		grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+		grid-template-rows: 1fr;
+		& .gridContent {
+			background: rgba(0,0,0,.6);
+
+			& .gridCardItem {
+				line-height: 1.2rem;
+			}
+		}
+		& h3 {
+			font-size: 1.2rem;
+		}
+		& h5 {
+			padding: 0;
+			margin: 0;
+			font-size: 1rem;
+		}
+	}
+}
+

@@ -1,0 +1,11 @@
+.block2 {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	/* background: rgba(0,0,0,.95); */
+	padding: 3rem 0;
+	@media (--sidebar-query) {
+		margin-top: 10rem;
+	}
+
+}
