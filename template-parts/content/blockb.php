@@ -37,15 +37,15 @@ if( have_rows('blockb') ):
 		<?php echo $block_subtitle; ?>
 		</h3>
 
-
-		<button  on="tap:<?php echo $block_cta_link; ?>" role="button" tabindex="0"><?php echo $block_cta_text; ?></button>
-
-<a on="tap:<?php echo $block_cta_link; ?>" role="button" tabindex="0">
+<a href="<?php echo $block_lighthouse; ?>">
+		<button  role="button" tabindex="0"><?php echo $block_cta_text; ?></button>
+</a>
+<a href="<?php echo $block_lighthouse; ?>" role="button" tabindex="0">
 <img src="<?php echo $block_img['url']; ?>"
 			alt="<?php echo $block_img['alt']; ?>">
 </a>
 
-<amp-lightbox id="<?php echo $block_cta_link; ?>" layout="nodisplay">
+<!-- <amp-lightbox id="<?php echo $block_cta_link; ?>" layout="nodisplay">
     <div class="lightbox" on="tap:<?php echo $block_cta_link; ?>.close" role="button" tabindex="0">
 
       <iframe width="600" height="600"
@@ -53,7 +53,7 @@ if( have_rows('blockb') ):
               src="<?php echo $block_lighthouse; ?>">
   </iframe>
     </div>
-  </amp-lightbox>
+  </amp-lightbox> -->
 <?php
         endif;
     endwhile;
