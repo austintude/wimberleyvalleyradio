@@ -20,8 +20,9 @@
 	}
 	& .site-title {
 		font-size: 2.3rem;
-		top: 5rem;
+		top: 3.5rem;
 		position: absolute;
+		width: 65vw;
 	}
 	@media (--content-query) {
 	& .site-header amp-img.attachment-post-thumbnail {
@@ -94,6 +95,7 @@
 		/* background-image: linear-gradient(90deg,#f55050,#f18a22,#f2f21f,#00793f,#4040fc,#9e04bc); */
 		padding: 0;
 		color: #fff;
+		background: #fff;
 		/* max-height: 35rem; */
 		/* -webkit-clip-path: polygon(100% 100%,100% 0,-400% 0);
 		clip-path: polygon(100% 100%,100% 0,-400% 0); */
@@ -105,7 +107,7 @@
 	}
 		& .heroButtons {
 			position: relative;
-			top: 8rem;
+			top: 10rem;
 		}
 	}
 
