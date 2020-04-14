@@ -32,7 +32,7 @@ $nomintate_link_url	= get_field('nomintate_link_url');
     <div class="lightbox" on="tap:my-lightbox.close" role="button" tabindex="0">
 
       <iframe width="600" height="600"
-              sandbox="allow-scripts allow-same-origin allow-popups" scrolling="auto"
+              sandbox="allow-scripts allow-forms allow-same-origin allow-popups" scrolling="auto"
               src="<?php echo $nomintate_link_url; ?>">
   </iframe>
     </div>
