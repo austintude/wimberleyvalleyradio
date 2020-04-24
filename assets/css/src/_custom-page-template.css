@@ -14,6 +14,12 @@
         justify-content: flex-start;
         grid-gap: 0;
 		/* color: #fff; */
+		& .heroText {
+			margin: 0 8vw;
+			@media (--content-query) {
+				margin: 1rem 0;
+			}
+		}
 	}
 	& .titleTagWrapper {
 		margin-top: 0rem;
@@ -23,6 +29,11 @@
 		top: 3.5rem;
 		position: absolute;
 		width: 65vw;
+		@media (--content-query) {
+			font-size: 5rem;
+    text-shadow: 7px 5px 4px #111;
+    margin-left: 0rem;
+		}
 	}
 	@media (--content-query) {
 	& .site-header amp-img.attachment-post-thumbnail {
@@ -108,6 +119,9 @@
 		& .heroButtons {
 			position: relative;
 			top: 10rem;
+			@media (--content-query) {
+				top: 1rem;
+			}
 		}
 	}
 
