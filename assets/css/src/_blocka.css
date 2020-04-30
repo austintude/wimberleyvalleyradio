@@ -7,7 +7,8 @@ section.covid19 {
 	}
 }
 .blocka,
-.blockb {
+.blockb,
+.blockc {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -26,8 +27,43 @@ section.covid19 {
 	}
 
 	@media (--sidebar-query) {
-		margin-top: 12rem;
+		margin-top: 0rem;
 
 	}
+
+}
+
+.blockc {
+	& .lightbox {
+		display: grid;
+		grid-template-columns: 1fr;
+		@media (--content-query) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+		}
+
+		& .blockContent {
+			display: grid;
+			color: #f7f7f7;
+			@media (--content-query) {
+			grid-column: 2 / 4;
+			grid-row: 2 / 3;
+			}
+
+			& p {
+				font-size: .8rem;
+				padding: 0 1rem;
+
+				@media (--wide-menu-query) {
+					font-size: .7rem;
+				}
+				@media (--content-query) {
+					font-size: 1rem;
+				}
+			}
+
+		}
+	}
+
 
 }
