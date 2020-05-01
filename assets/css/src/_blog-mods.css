@@ -18,6 +18,13 @@
 .blog,
 .single,
 .archive {
+	& .entry-content>* {
+		padding: 0;
+		max-width: 94vw;
+		@media (--content-query) {
+			max-width: 45rem;
+		}
+	}
 	& .site-branding .site-title {
 		font-size: 4rem;
 		@media (--sidebar-query) {
