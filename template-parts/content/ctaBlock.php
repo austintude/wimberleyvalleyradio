@@ -18,7 +18,7 @@ $ctablock_phone_text				= get_field('ctablock_phone_text');
 				<h4><?php echo $ctablock_text; ?></h4>
 		</div>
 		<div class="secondLine" id="ctaIframe">
-			<button>
+			<button aria-label="<?php echo $ctablock_phone_text; ?>">
 				<a href="tel:<?php echo $ctablock_phone_link; ?>"><?php echo $ctablock_phone_text; ?></a>
 </button>
 

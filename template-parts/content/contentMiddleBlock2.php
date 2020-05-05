@@ -37,7 +37,7 @@ $nomintate_link_url	= get_field('nomintate_link_url');
   </iframe>
     </div>
   </amp-lightbox>
-						<button on="tap:my-lightbox" role="button" tabindex="0" id="freeEstimate" class="btn btn-success btn-lg btn-block" >
+						<button on="tap:my-lightbox" role="button" tabindex="0" id="freeEstimate" class="btn btn-success btn-lg btn-block" aria-label="<?php echo $nominate_button_text; ?>" >
 						<?php echo $nominate_button_text; ?>
 						</button>
 		<!-- <div class="ctaButton">

@@ -21,7 +21,7 @@ $more_testimonials_link_txt			= get_field('more_testimonials_link_txt');
 </div>
     <ol class="testimonialsList testimonialsList">
         <!-- insert acf sub-repeater here -->
-        <amp-carousel height="600" 
+        <amp-carousel height="600"
 		width="1200"
 		layout="responsive"
 		type="slides"
@@ -53,21 +53,21 @@ $overall = get_sub_field('overall');
                             <ul>
                                 <li>
                                     <div class="leftItem">
-                                    Star Rating: 
+                                    Star Rating:
                                     </div>
                                     <div class="rightItem">
                                     <span class="rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                                         <meta itemprop="worstRating" content="0">
                                             <span itemprop="ratingValue">
                                             <?php echo $overall; ?>
-                                            </span> / 
+                                            </span> /
                                             <span itemprop="bestRating">
-                                            <?php echo $overall; ?> 
+                                            <?php echo $overall; ?>
                                                 </span>
                                     </span>
                                         </div>
                                 </li>
-                                
+
                             </ul>
                         </div>
                     </div>
@@ -77,24 +77,24 @@ $overall = get_sub_field('overall');
                 <cite class="testimonialsQuote">
                     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                     <?php echo $testimonial_author; ?>
-                    </span> - 
+                    </span> -
                     <meta itemprop="datePublished" content="<?php echo $testimonial_date; ?>">
                     <span class="testimonialDate">
                         <?php echo $testimonial_date; ?>
                     </span>
 
                 </cite>
-                
+
             </blockquote>
-            
-                
+
+
             </li>
             <?php endwhile; ?>
             </amp-carousel>
 
     </ol>
     <div class="moreTestimonials">
-    <button>
+    <button aria-label="<?php echo $ctablock_phone_text; ?>">
 				<a href="<?php echo $more_testimonials_link; ?>"><?php echo $more_testimonials_link_txt; ?></a>
 </button>
                     </div>
