@@ -36,7 +36,7 @@ if( have_rows('blocka') ):
 		<?php echo $block_subtitle; ?>
 		</h3>
 		<a href="<?php echo $block_cta_link; ?>">
-		<button><?php echo $block_cta_text; ?></button>
+		<button arial-label="<?php echo $block_cta_text; ?>"><?php echo $block_cta_text; ?></button>
 		</a>
 <a href="<?php echo $block_cta_link; ?>">
 <img src="<?php echo $block_img['url']; ?>"

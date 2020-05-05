@@ -27,11 +27,13 @@ $underwriter_link			= get_field('underwriter_link');
 
 						<div class="sectionCard" id="<?php echo $sectioncard_id; ?>">
 						<h3 class="mb1"><?php the_title(); ?></h3>
-						<a
+						<?php if ($underwriter_link != null) { ?>
+						<a aria-label="<?php echo $underwriter_link; ?>"
                                     class="ampstart-btn caps text-decoration-none inline-block"
 									href="<?php echo $underwriter_link; ?>">
+						<?php } ?>
 									<?php the_post_thumbnail(); ?>
-							</a>
+									<?php if ($underwriter_link != null) { ?>	</a> <?php } ?>
 						</div>
 						<?php endwhile;  wp_reset_query(); ?>
 

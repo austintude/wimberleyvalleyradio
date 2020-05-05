@@ -38,11 +38,11 @@ if( have_rows('blockc') ):
 		</h3>
 
 <!-- <a href="<?php echo $block_cta_link; ?>"> -->
-		<button  role="button" tabindex="0"  on="tap:<?php echo $block_cta_link; ?>"><?php echo $block_cta_text; ?></button>
+		<button aria-label="<?php echo $block_cta_text; ?>" role="button" tabindex="0"  on="tap:<?php echo $block_cta_link; ?>"><?php echo $block_cta_text; ?></button>
 <!-- </a> -->
 <!-- <a href="<?php echo $block_cta_link; ?>" role="button" tabindex="0"> -->
 <img src="<?php echo $block_img['url']; ?>"
-			alt="<?php echo $block_img['alt']; ?>" on="tap:<?php echo $block_cta_link; ?>">
+			alt="<?php echo $block_img['alt']; ?>" on="tap:<?php echo $block_cta_link; ?>" aria-label="<?php echo $block_cta_text; ?>">
 <!-- </a> -->
 
 <amp-lightbox id="<?php echo $block_cta_link; ?>" layout="nodisplay">

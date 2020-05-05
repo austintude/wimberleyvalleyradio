@@ -25,7 +25,7 @@ $listen_live_icon			= get_field('listen_live_icon');
 
 
 
-		<a href="https://streamdb7web.securenetsystems.net/cirrusencore/KWVH">
+		<a href="https://streamdb7web.securenetsystems.net/cirrusencore/KWVH"  rel="noopener">
 
 		<h4>Click to Listen:</h4>
 		<img src="<?php echo $listen_live_icon['url']; ?>" alt="<?php echo $listen_live_icon['alt']; ?>"/>

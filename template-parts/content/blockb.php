@@ -38,7 +38,7 @@ if( have_rows('blockb') ):
 		</h3>
 
 <a href="<?php echo $block_lighthouse; ?>">
-		<button  role="button" tabindex="0"><?php echo $block_cta_text; ?></button>
+		<button aria-label="<?php echo $block_cta_text; ?>" role="button" tabindex="0"><?php echo $block_cta_text; ?></button>
 </a>
 <a href="<?php echo $block_lighthouse; ?>" role="button" tabindex="0">
 <img src="<?php echo $block_img['url']; ?>"
