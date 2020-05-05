@@ -37,10 +37,10 @@ if( have_rows('blockb') ):
 		<?php echo $block_subtitle; ?>
 		</h3>
 
-<a href="<?php echo $block_lighthouse; ?>">
+<a href="<?php echo $block_lighthouse; ?>" aria-label="<?php echo $block_cta_text; ?>">
 		<button aria-label="<?php echo $block_cta_text; ?>" role="button" tabindex="0"><?php echo $block_cta_text; ?></button>
 </a>
-<a href="<?php echo $block_lighthouse; ?>" role="button" tabindex="0">
+<a href="<?php echo $block_lighthouse; ?>" role="button" aria-label="<?php echo $block_cta_text; ?>" tabindex="0">
 <img src="<?php echo $block_img['url']; ?>"
 			alt="<?php echo $block_img['alt']; ?>">
 </a>

@@ -35,10 +35,10 @@ if( have_rows('blocka') ):
 		<h3>
 		<?php echo $block_subtitle; ?>
 		</h3>
-		<a href="<?php echo $block_cta_link; ?>">
+		<a href="<?php echo $block_cta_link; ?>" aria-label="<?php echo $block_cta_text; ?>">
 		<button arial-label="<?php echo $block_cta_text; ?>"><?php echo $block_cta_text; ?></button>
 		</a>
-<a href="<?php echo $block_cta_link; ?>">
+<a href="<?php echo $block_cta_link; ?>" aria-label="<?php echo $block_cta_text; ?>">
 <img src="<?php echo $block_img['url']; ?>"
 			alt="<?php echo $block_img['alt']; ?>">
 </a>

@@ -281,7 +281,7 @@ figcaption {
 	display: grid;
 	margin: auto 2fr;
 	grid-template-rows: 1fr 60px;
-	color: #333;
+	color: #111;
 	& h4 {
 
 		text-transform: uppercase;
@@ -294,7 +294,7 @@ figcaption {
 		font-size: 1rem;
 		line-height: 1rem;
 		font-weight: 400;
-		color: #333;
+		color: #111;
 		text-decoration: none;
 	}
 
@@ -655,7 +655,7 @@ justify-self: center;
 		max-width: 100vw;
 		}
 		& a {
-			color: #888;
+			color: #111;
 			text-decoration: none;
 		}
 	}

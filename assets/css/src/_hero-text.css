@@ -110,7 +110,7 @@ h1.callNumberBackground {
 .listenLive {
 	& button {
     color: #333;
-	background: #F7B722;
+	background: rgb(76,75,64);
 	& img {
 		max-height: 3rem;
 		align-self: center;
