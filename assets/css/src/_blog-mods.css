@@ -18,7 +18,7 @@
 .blog,
 .single,
 .archive {
-	& .entry-content>* {
+	& .entry-content {
 		padding: 0;
 		max-width: 90vw;
 		@media (--content-query) {

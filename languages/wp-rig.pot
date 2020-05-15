@@ -15,6 +15,10 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: about.php:3
+msgid "About Page Template"
+msgstr ""
+
 #. translators: 1: title.
 #: comments.php:38
 msgid "One thought on &ldquo;%1$s&rdquo;"
@@ -32,8 +36,28 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: header.php:36
+#: contact.php:3
+msgid "Contact Page Template"
+msgstr ""
+
+#: custom-page-template.php:3
+msgid "Custom Page Template"
+msgstr ""
+
+#: gallery.php:3
+msgid "Gallery Page Template"
+msgstr ""
+
+#: header-about.php:40, header-bkup.php:36, header-custom-blog-bkup.php:43, header-custom-blog.php:40, header-custom.php:40, header-listen-live.php:40, header.php:40
 msgid "Skip to content"
+msgstr ""
+
+#: inc/Accessibility/Component.php:69
+msgid "Expand child menu"
+msgstr ""
+
+#: inc/Accessibility/Component.php:70
+msgid "Collapse child menu"
 msgstr ""
 
 #. translators: 1: required WP version number, 2: required PHP version number, 3: available WP version number, 4: available PHP version number
@@ -49,44 +73,6 @@ msgstr ""
 #. translators: 1: required PHP version number, 2: available PHP version number
 #: inc/back-compat.php:35
 msgid "WP Rig requires at least PHP version %1$s. You are running version %2$s. Please update and try again."
-msgstr ""
-
-#. translators: 1: classname/type of the variable, 2: interface name
-#: inc/Template_Tags.php:54
-msgid "The theme templating component %1$s does not implement the %2$s interface."
-msgstr ""
-
-#. translators: %s: template tag name
-#: inc/Template_Tags.php:81
-msgid "The template tag %s does not exist."
-msgstr ""
-
-#. translators: 1: template tag method name, 2: component class name
-#: inc/Template_Tags.php:110
-msgid "The template tag method %1$s registered by theme component %2$s must either be a callable or an array."
-msgstr ""
-
-#. translators: 1: template tag method name, 2: component class name
-#: inc/Template_Tags.php:121
-msgid "The template tag method %1$s registered by theme component %2$s conflicts with an already registered template tag of the same name."
-msgstr ""
-
-#. translators: 1: classname/type of the variable, 2: interface name
-#: inc/Theme.php:57
-msgid "The theme component %1$s does not implement the %2$s interface."
-msgstr ""
-
-#. translators: %s: slug
-#: inc/Theme.php:120
-msgid "No theme component with the slug %s exists."
-msgstr ""
-
-#: inc/Accessibility/Component.php:69
-msgid "Expand child menu"
-msgstr ""
-
-#: inc/Accessibility/Component.php:70
-msgid "Collapse child menu"
 msgstr ""
 
 #: inc/Comments/Component.php:132
@@ -202,171 +188,283 @@ msgstr ""
 msgid "Invalid theme stylesheet handle: %s"
 msgstr ""
 
-#: template-parts/content/entry-attachment.php:33, template-parts/content/entry.php:32
+#. translators: 1: classname/type of the variable, 2: interface name
+#: inc/Template_Tags.php:54
+msgid "The theme templating component %1$s does not implement the %2$s interface."
+msgstr ""
+
+#. translators: %s: template tag name
+#: inc/Template_Tags.php:81
+msgid "The template tag %s does not exist."
+msgstr ""
+
+#. translators: 1: template tag method name, 2: component class name
+#: inc/Template_Tags.php:110
+msgid "The template tag method %1$s registered by theme component %2$s must either be a callable or an array."
+msgstr ""
+
+#. translators: 1: template tag method name, 2: component class name
+#: inc/Template_Tags.php:121
+msgid "The template tag method %1$s registered by theme component %2$s conflicts with an already registered template tag of the same name."
+msgstr ""
+
+#. translators: 1: classname/type of the variable, 2: interface name
+#: inc/Theme.php:57
+msgid "The theme component %1$s does not implement the %2$s interface."
+msgstr ""
+
+#. translators: %s: slug
+#: inc/Theme.php:120
+msgid "No theme component with the slug %s exists."
+msgstr ""
+
+#: listen-live-page-template.php:3
+msgid "Listen Live Page Template"
+msgstr ""
+
+#: menu-page-template.php:3
+msgid "Menu Page Template"
+msgstr ""
+
+#: portfolio-child.php:3
+msgid "Portfolio Child Page Template"
+msgstr ""
+
+#: portfolio.php:3
+msgid "Portfolio Page Template"
+msgstr ""
+
+#: press.php:3
+msgid "Press Page Template"
+msgstr ""
+
+#: product-line.php:3
+msgid "Product Line Page Template"
+msgstr ""
+
+#: template-parts/content-bkup/entry-attachment.php:33, template-parts/content-bkup/entry.php:32, template-parts/content/entry-attachment-bkup.php:33, template-parts/content/entry-attachment.php:33, template-parts/content/entry-bkup.php:32, template-parts/content/entry.php:32
 msgid "Previous:"
 msgstr ""
 
-#: template-parts/content/entry-attachment.php:43, template-parts/content/entry.php:33
+#: template-parts/content-bkup/entry-attachment.php:43, template-parts/content-bkup/entry.php:33, template-parts/content/entry-attachment-bkup.php:43, template-parts/content/entry-attachment.php:43, template-parts/content/entry-bkup.php:33, template-parts/content/entry.php:33
 msgid "Next:"
 msgstr ""
 
-#: template-parts/content/entry-attachment.php:49
+#: template-parts/content-bkup/entry-attachment.php:49, template-parts/content/entry-attachment-bkup.php:49, template-parts/content/entry-attachment.php:49
 msgid "Post navigation"
 msgstr ""
 
 #. translators: %s: post title
-#: template-parts/content/entry_actions.php:21
+#. translators: %s: post title
+#. translators: %s: post title
+#: template-parts/content-bkup/entry_actions.php:21, template-parts/content/entry_actions-bkup.php:21, template-parts/content/entry_actions.php:21
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #. translators: %s: post title
-#: template-parts/content/entry_actions.php:40
+#. translators: %s: post title
+#. translators: %s: post title
+#: template-parts/content-bkup/entry_actions.php:40, template-parts/content/entry_actions-bkup.php:40, template-parts/content/entry_actions.php:40
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content/entry_content.php:18
+#. translators: %s: Name of current post. Only visible to screen readers
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content-bkup/entry_content.php:18, template-parts/content/entry_content-bkup.php:18, template-parts/content/entry_content.php:18
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: template-parts/content/entry_content.php:31
+#: template-parts/content-bkup/entry_content.php:31, template-parts/content/entry_content-bkup.php:31, template-parts/content/entry_content.php:31
 msgid "Pages:"
 msgstr ""
 
 #. translators: %s: post date
-#: template-parts/content/entry_meta.php:63
+#. translators: %s: post date
+#. translators: %s: post date
+#: template-parts/content-bkup/entry_meta.php:63, template-parts/content/entry_meta-bkup.php:63, template-parts/content/entry_meta.php:63
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
 #. translators: %s: post author
-#: template-parts/content/entry_meta.php:76
+#. translators: %s: post author
+#. translators: %s: post author
+#: template-parts/content-bkup/entry_meta.php:76, template-parts/content/entry_meta-bkup.php:76, template-parts/content/entry_meta.php:76
 msgctxt "post author"
 msgid "By %s"
 msgstr ""
 
 #. translators: %s: post author
-#: template-parts/content/entry_meta.php:79
+#. translators: %s: post author
+#. translators: %s: post author
+#: template-parts/content-bkup/entry_meta.php:79, template-parts/content/entry_meta-bkup.php:79, template-parts/content/entry_meta.php:79
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
 #. translators: %s: post parent title
-#: template-parts/content/entry_meta.php:95
+#. translators: %s: post parent title
+#. translators: %s: post parent title
+#: template-parts/content-bkup/entry_meta.php:95, template-parts/content/entry_meta-bkup.php:95, template-parts/content/entry_meta.php:95
 msgctxt "post parent"
 msgid "In %s"
 msgstr ""
 
 #. translators: %s: post parent title
-#: template-parts/content/entry_meta.php:98
+#. translators: %s: post parent title
+#. translators: %s: post parent title
+#: template-parts/content-bkup/entry_meta.php:98, template-parts/content/entry_meta-bkup.php:98, template-parts/content/entry_meta.php:98
 msgctxt "post parent"
 msgid "in %s"
 msgstr ""
 
 #. translators: separator between taxonomy terms
-#: template-parts/content/entry_taxonomies.php:24
+#. translators: separator between taxonomy terms
+#. translators: separator between taxonomy terms
+#: template-parts/content-bkup/entry_taxonomies.php:24, template-parts/content/entry_taxonomies-bkup.php:24, template-parts/content/entry_taxonomies.php:24
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: %s: list of taxonomy terms
-#: template-parts/content/entry_taxonomies.php:31
+#. translators: %s: list of taxonomy terms
+#. translators: %s: list of taxonomy terms
+#: template-parts/content-bkup/entry_taxonomies.php:31, template-parts/content/entry_taxonomies-bkup.php:31, template-parts/content/entry_taxonomies.php:31
 msgid "Posted in %s"
 msgstr ""
 
 #. translators: %s: list of taxonomy terms
-#: template-parts/content/entry_taxonomies.php:37
+#. translators: %s: list of taxonomy terms
+#. translators: %s: list of taxonomy terms
+#: template-parts/content-bkup/entry_taxonomies.php:37, template-parts/content/entry_taxonomies-bkup.php:37, template-parts/content/entry_taxonomies.php:37
 msgid "Tagged %s"
 msgstr ""
 
 #. translators: %s: taxonomy name
-#: template-parts/content/entry_taxonomies.php:44
+#. translators: %s: taxonomy name
+#. translators: %s: taxonomy name
+#: template-parts/content-bkup/entry_taxonomies.php:44, template-parts/content/entry_taxonomies-bkup.php:44, template-parts/content/entry_taxonomies.php:44
 msgid "%s:"
 msgstr ""
 
-#: template-parts/content/error-404.php:16
+#: template-parts/content-bkup/error-404.php:16, template-parts/content/error-404-bkup.php:16, template-parts/content/error-404.php:16
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: template-parts/content/error-404.php:27
+#: template-parts/content-bkup/error-404.php:27, template-parts/content/error-404-bkup.php:27, template-parts/content/error-404.php:27
 msgid "Most Used Categories"
 msgstr ""
 
 #. translators: %1$s: smiley
-#: template-parts/content/error-404.php:45
+#. translators: %1$s: smiley
+#. translators: %1$s: smiley
+#: template-parts/content-bkup/error-404.php:45, template-parts/content/error-404-bkup.php:45, template-parts/content/error-404.php:45
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: template-parts/content/error-500.php:14
+#: template-parts/content-bkup/error-500.php:14, template-parts/content/error-500-bkup.php:14, template-parts/content/error-500.php:14
 msgid "Oops! Something went wrong."
 msgstr ""
 
-#: template-parts/content/error-offline.php:14
+#: template-parts/content-bkup/error-offline.php:14, template-parts/content/error-offline-bkup.php:14, template-parts/content/error-offline.php:14
 msgid "Oops! It looks like you&#8217;re offline."
 msgstr ""
 
 #. translators: 1: link to WP admin new post page.
-#: template-parts/content/error.php:23
+#. translators: 1: link to WP admin new post page.
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-bkup/error.php:23, template-parts/content/error-bkup.php:23, template-parts/content/error.php:23
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content/error.php:38
+#: template-parts/content-bkup/error.php:38, template-parts/content/error-bkup.php:38, template-parts/content/error.php:38
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: template-parts/content/error.php:44
+#: template-parts/content-bkup/error.php:44, template-parts/content/error-bkup.php:44, template-parts/content/error.php:44
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: template-parts/content/page_header.php:14
+#: template-parts/content-bkup/page_header.php:14, template-parts/content/page_header-bkup.php:14, template-parts/content/page_header.php:14
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: template-parts/content/page_header.php:22
+#: template-parts/content-bkup/page_header.php:22, template-parts/content/page_header-bkup.php:22, template-parts/content/page_header.php:22
 msgid "Nothing Found"
 msgstr ""
 
 #. translators: %s: search query
-#: template-parts/content/page_header.php:41
+#. translators: %s: search query
+#. translators: %s: search query
+#: template-parts/content-bkup/page_header.php:41, template-parts/content/page_header-bkup.php:41, template-parts/content/page_header.php:41
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/content/pagination.php:13
+#: template-parts/content-bkup/pagination.php:13, template-parts/content/pagination-bkup.php:13, template-parts/content/pagination.php:13
 msgctxt "previous set of search results"
 msgid "Previous"
 msgstr ""
 
-#: template-parts/content/pagination.php:14
+#: template-parts/content-bkup/pagination.php:14, template-parts/content/pagination-bkup.php:14, template-parts/content/pagination.php:14
 msgctxt "next set of search results"
 msgid "Next"
 msgstr ""
 
-#: template-parts/content/pagination.php:15
+#: template-parts/content-bkup/pagination.php:15, template-parts/content/pagination-bkup.php:15, template-parts/content/pagination.php:15
 msgid "Page navigation"
 msgstr ""
 
-#: template-parts/footer/info.php:13
+#: template-parts/footer-bkup/info.php:13, template-parts/footer/info-bkup-new.php:13, template-parts/footer/info-bkup.php:13
 msgid "https://wordpress.org/"
 msgstr ""
 
 #. translators: %s: CMS name, i.e. WordPress.
-#: template-parts/footer/info.php:16
+#. translators: %s: CMS name, i.e. WordPress.
+#. translators: %s: CMS name, i.e. WordPress.
+#: template-parts/footer-bkup/info.php:16, template-parts/footer/info-bkup-new.php:16, template-parts/footer/info-bkup.php:16
 msgid "Proudly powered by %s"
 msgstr ""
 
 #. translators: Theme name.
-#: template-parts/footer/info.php:22
+#. translators: Theme name.
+#. translators: Theme name.
+#: template-parts/footer-bkup/info.php:22, template-parts/footer/info-bkup-new.php:22, template-parts/footer/info-bkup.php:22
 msgid "Theme: %s by the contributors."
 msgstr ""
 
-#: template-parts/header/navigation.php:16
+#: template-parts/footer/info-bkup-1-17-19.php:19, template-parts/footer/info-bkup-1-3-20.php:206, template-parts/footer/info.php:199
+msgid "https://austintatiousdesign.co/"
+msgstr ""
+
+#. translators: %s: CMS name, i.e. WordPress.
+#. translators: %s: CMS name, i.e. WordPress.
+#. translators: %s: CMS name, i.e. WordPress.
+#: template-parts/footer/info-bkup-1-17-19.php:22, template-parts/footer/info-bkup-1-3-20.php:209, template-parts/footer/info.php:202
+msgid "Proudly built and maintained by %s"
+msgstr ""
+
+#. translators: Theme name.
+#: template-parts/footer/info-bkup-1-17-19.php:28
+msgid "Theme: %s by Daniel Bisett."
+msgstr ""
+
+#: template-parts/header-bkup/navigation.php:16, template-parts/header/navigation-bkup.php:16, template-parts/header/navigation.php:16
 msgid "Main menu"
 msgstr ""
 
-#: template-parts/header/navigation.php:39
+#: template-parts/header-bkup/navigation.php:39, template-parts/header/navigation-bkup.php:39, template-parts/header/navigation.php:39
 msgid "Open menu"
 msgstr ""
 
-#: template-parts/header/navigation.php:49
+#: template-parts/header-bkup/navigation.php:49, template-parts/header/navigation-bkup.php:49, template-parts/header/navigation.php:49
 msgid "Menu"
+msgstr ""
+
+#: testimonials.php:3
+msgid "Testimonials Page Template"
+msgstr ""
+
+#: __woocommerce.php:3
+msgid "WooCommerce Page Template"
 msgstr ""

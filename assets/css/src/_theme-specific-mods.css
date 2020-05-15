@@ -398,6 +398,7 @@ figcaption {
 		width: 100vw;
 
 		& .builtBy {
+			padding-top: 0.8rem;
 			width: 100vw;
 			/* background: rgba(0,0,0,.9); */
 		}
@@ -655,7 +656,7 @@ justify-self: center;
 		max-width: 100vw;
 		}
 		& a {
-			color: #111;
+			color: #111pink elephant;
 			text-decoration: none;
 		}
 	}
