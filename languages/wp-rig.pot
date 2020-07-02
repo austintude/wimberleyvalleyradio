@@ -48,7 +48,7 @@ msgstr ""
 msgid "Gallery Page Template"
 msgstr ""
 
-#: header-about.php:64, header-bkup.php:36, header-custom-blog-bkup.php:43, header-custom-blog.php:64, header-custom.php:64, header-listen-live.php:64, header.php:64
+#: header-about.php:73, header-bkup.php:36, header-custom-blog-bkup.php:43, header-custom-blog.php:73, header-custom.php:73, header-listen-live.php:73, header.php:73
 msgid "Skip to content"
 msgstr ""
 
