@@ -34,7 +34,31 @@ namespace WP_Rig\WP_Rig;
 <body <?php body_class(); ?>>
 <!-- Google Tag Manager -->
 <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-KVBZPM6&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
-
+<!-- Begin "Facebook Pixel for AMP - Form" || Help center -->
+<!-- Insert in Settings->HTML/CSS->Body -->
+<!-- IN:20200120-09-1 -->
+<amp-analytics type="facebookpixel" id="facebook-pixel">
+<script type="application/json">
+{
+    "vars": {
+        "pixelId": "230508921340939"
+    },
+    "triggers": {
+        "trackPageview": {
+            "on": "visible",
+            "request": "pageview"
+        },
+        "formSubmit": {
+            "on": "amp-form-submit-success",
+            "request": "event",
+            "vars": {
+            "eventName": "Click to view deeper"
+            }
+        }   }
+}
+</script>
+</amp-analytics>
+<!-- End "Facebook Pixel for AMP - Form" || Help center -->
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wp-rig' ); ?></a>
