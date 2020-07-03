@@ -56,11 +56,75 @@ namespace WP_Rig\WP_Rig;
             }
         },
         "buttonClick": {
-        "selector":"#element-ID",
+        "selector":".listenLive",
             "on": "click",
             "request": "event",
             "vars": {
-            "eventName": "button click"
+            "eventName": "listen live button click"
+            }
+		},
+		"buttonClick": {
+        "selector":".kwvhX",
+            "on": "click",
+            "request": "event",
+            "vars": {
+            "eventName": "listen live-merchandise button click"
+            }
+        },
+		"buttonClick": {
+        "selector":".donateNow",
+            "on": "click",
+            "request": "event",
+            "vars": {
+            "eventName": "donate button click"
+            }
+        },
+		"buttonClick": {
+        "selector":".gridCardItemLink",
+            "on": "click",
+            "request": "event",
+            "vars": {
+            "eventName": "Support or App or Volunteer KWVH click"
+            }
+        },
+		"buttonClick": {
+        "selector":".liveLink",
+            "on": "click",
+            "request": "event",
+            "vars": {
+            "eventName": "listen live next to logo menu top button click"
+            }
+        },
+		"buttonClick": {
+        "selector":".wp-block-button__link",
+            "on": "click",
+            "request": "event",
+            "vars": {
+            "eventName": "wp-block-button__link donate here click"
+            }
+        },
+		"buttonClick": {
+        "selector":".facebook-icon-link",
+            "on": "click",
+            "request": "event",
+            "vars": {
+            "eventName": "facebook-icon-link click"
+            }
+        },
+		"buttonClick": {
+        "selector":".instagram-icon-link",
+            "on": "click",
+            "request": "event",
+            "vars": {
+            "eventName": "instagram-icon-link click"
+            }
+        },
+		"buttonClick": {
+        "selector":".twitter-icon-link",
+            "on": "click",
+            "request": "event",
+            "vars": {
+            "eventName": "twitter-icon-link click"
             }
         }
     }

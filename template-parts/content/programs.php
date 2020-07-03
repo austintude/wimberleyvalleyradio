@@ -77,7 +77,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 						</div> <!-- gridCardItem -->
 						<?php if ($grid_card_item_link_text != null) { ?>
 						<div class="gridCardItemLink">
-							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
+							<a role="button" class="block-2-grid-card-item-link-text-lightbox-open" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
 								<?php echo $grid_card_item_link_text; ?>
 </a>
 						</div>
@@ -166,7 +166,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 						</div> <!-- gridCardItem -->
 						<?php if ($grid_card_item_link_text != null) { ?>
 						<div class="gridCardItemLink">
-							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
+							<a role="button" class="block-2-grid-card-item-link-text-lightbox-open" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
 								<?php echo $grid_card_item_link_text; ?>
 </a>
 						</div>
@@ -255,7 +255,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 						</div> <!-- gridCardItem -->
 						<?php if ($grid_card_item_link_text != null) { ?>
 						<div class="gridCardItemLink">
-							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
+							<a role="button" class="block-2-grid-card-item-link-text-lightbox-open" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
 								<?php echo $grid_card_item_link_text; ?>
 </a>
 						</div>
@@ -344,7 +344,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 						</div> <!-- gridCardItem -->
 						<?php if ($grid_card_item_link_text != null) { ?>
 						<div class="gridCardItemLink">
-							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
+							<a role="button" class="block-2-grid-card-item-link-text-lightbox-open" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
 								<?php echo $grid_card_item_link_text; ?>
 </a>
 						</div>
@@ -433,7 +433,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 						</div> <!-- gridCardItem -->
 						<?php if ($grid_card_item_link_text != null) { ?>
 						<div class="gridCardItemLink">
-							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
+							<a role="button" class="block-2-grid-card-item-link-text-lightbox-open" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
 								<?php echo $grid_card_item_link_text; ?>
 </a>
 						</div>
@@ -522,7 +522,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 						</div> <!-- gridCardItem -->
 						<?php if ($grid_card_item_link_text != null) { ?>
 						<div class="gridCardItemLink">
-							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
+							<a role="button" class="block-2-grid-card-item-link-text-lightbox-open" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
 								<?php echo $grid_card_item_link_text; ?>
 </a>
 						</div>
@@ -611,7 +611,7 @@ $grid_card_loop_sunday		= get_field('grid_card_loop_sunday');
 						</div> <!-- gridCardItem -->
 						<?php if ($grid_card_item_link_text != null) { ?>
 						<div class="gridCardItemLink">
-							<a role="button" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
+							<a role="button" class="block-2-grid-card-item-link-text-lightbox-open" on="tap:AMP.setState({showLightbox<?php echo $grid_card_item_id; ?>: true})">
 								<?php echo $grid_card_item_link_text; ?>
 </a>
 						</div>

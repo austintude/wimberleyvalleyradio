@@ -114,7 +114,7 @@ $contact_us_phone			= get_field('contact_us_phone');
 
 	<div id="businessSocial">
 		<div id="socialIcon1">
-			<a href="<?php echo $facebook_link; ?>" rel="noopener"  target="_blank" aria-label="<?php echo $facebook_link; ?>">
+			<a href="<?php echo $facebook_link; ?>" rel="noopener" class="facebook-icon-link" target="_blank" aria-label="<?php echo $facebook_link; ?>">
 			<amp-img
 				src="<?php echo $facebook_icon['url']; ?>"
 				width="5"
@@ -125,7 +125,7 @@ $contact_us_phone			= get_field('contact_us_phone');
 </a>
 		</div>
 		<div id="socialIcon2">
-		<a href="<?php echo $instagram_link; ?>" rel="noopener" target="_blank" aria-label="<?php echo $instagram_link; ?>">
+		<a href="<?php echo $instagram_link; ?>" rel="noopener" class="instagram-icon-link" target="_blank" aria-label="<?php echo $instagram_link; ?>">
 		<amp-img
 				src="<?php echo $instagram_icon['url']; ?>"
 				width="5"
@@ -136,7 +136,7 @@ $contact_us_phone			= get_field('contact_us_phone');
 </a>
 		</div>
 		<div id="socialIcon3">
-		<a href="<?php echo $linkedin_link; ?>" rel="noopener" target="_blank" aria-label="<?php echo $linkedin_link; ?>">
+		<a href="<?php echo $linkedin_link; ?>" rel="noopener" class="twitter-icon-link" target="_blank" aria-label="<?php echo $linkedin_link; ?>">
 			<amp-img
 				src="<?php echo $linkedin_icon['url']; ?>"
 				width="5"
