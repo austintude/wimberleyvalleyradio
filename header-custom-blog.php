@@ -32,8 +32,6 @@ namespace WP_Rig\WP_Rig;
 </head>
 
 <body <?php body_class(); ?>>
-<!-- Google Tag Manager -->
-<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-KVBZPM6&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
 <!-- Begin "Facebook Pixel for AMP" || Help center -->
 <!-- Insert in Settings->HTML/CSS->Body -->
 <!-- IN:20200120-09-3 -->
@@ -55,7 +53,7 @@ namespace WP_Rig\WP_Rig;
             "eventName": "form-submission"
             }
         },
-        "buttonClick": {
+        "buttonClick1": {
         "selector":".listenLive",
             "on": "click",
             "request": "event",
@@ -63,7 +61,7 @@ namespace WP_Rig\WP_Rig;
             "eventName": "listen live button click"
             }
 		},
-		"buttonClick": {
+		"buttonClick2": {
         "selector":".kwvhX",
             "on": "click",
             "request": "event",
@@ -71,7 +69,7 @@ namespace WP_Rig\WP_Rig;
             "eventName": "listen live-merchandise button click"
             }
         },
-		"buttonClick": {
+		"buttonClick3": {
         "selector":".donateNow",
             "on": "click",
             "request": "event",
@@ -79,7 +77,7 @@ namespace WP_Rig\WP_Rig;
             "eventName": "donate button click"
             }
         },
-		"buttonClick": {
+		"buttonClick4": {
         "selector":".gridCardItemLink",
             "on": "click",
             "request": "event",
@@ -87,7 +85,7 @@ namespace WP_Rig\WP_Rig;
             "eventName": "Support or App or Volunteer KWVH click"
             }
         },
-		"buttonClick": {
+		"buttonClick5": {
         "selector":".liveLink",
             "on": "click",
             "request": "event",
@@ -95,7 +93,7 @@ namespace WP_Rig\WP_Rig;
             "eventName": "listen live next to logo menu top button click"
             }
         },
-		"buttonClick": {
+		"buttonClick6": {
         "selector":".wp-block-button__link",
             "on": "click",
             "request": "event",
@@ -103,7 +101,7 @@ namespace WP_Rig\WP_Rig;
             "eventName": "wp-block-button__link donate here click"
             }
         },
-		"buttonClick": {
+		"buttonClick7": {
         "selector":".facebook-icon-link",
             "on": "click",
             "request": "event",
@@ -111,7 +109,7 @@ namespace WP_Rig\WP_Rig;
             "eventName": "facebook-icon-link click"
             }
         },
-		"buttonClick": {
+		"buttonClick8": {
         "selector":".instagram-icon-link",
             "on": "click",
             "request": "event",
@@ -119,7 +117,7 @@ namespace WP_Rig\WP_Rig;
             "eventName": "instagram-icon-link click"
             }
         },
-		"buttonClick": {
+		"buttonClick9": {
         "selector":".twitter-icon-link",
             "on": "click",
             "request": "event",

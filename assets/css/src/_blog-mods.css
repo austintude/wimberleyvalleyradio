@@ -59,6 +59,9 @@
 	& article {
 		display: grid;
 		grid-column: 1;
+		@media (--content-query) {
+			padding-left: 7vw;
+		}
 	}
 	@media (--narrow-content-menu-query) {
 	& .heroText {
