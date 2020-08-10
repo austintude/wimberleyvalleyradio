@@ -10,6 +10,7 @@ namespace WP_Rig\WP_Rig;
 $nominate_button_text	= get_field('nominate_button_text');
 $nomintate_block_title	= get_field('nomintate_block_title');
 $nomintate_link_url	= get_field('nomintate_link_url');
+$volunteer_logo	= get_field('volunteer_logo');
 
 
 ?>
@@ -24,6 +25,7 @@ $nomintate_link_url	= get_field('nomintate_link_url');
 		</div> -->
 		<!-- end .contentMiddleBlockSubTitle -->
 		<div class="contentMiddleBlockcontent">
+		<img src="<?php echo $volunteer_logo['url']; ?>" alt="<?php echo $volunteer_logo['alt']; ?>" />
 			<h3>
 			<?php echo $nomintate_block_title; ?>
 

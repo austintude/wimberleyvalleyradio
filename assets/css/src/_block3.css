@@ -20,4 +20,10 @@
 	& .contentMiddleBlock .contentMiddleBlockTitle {
 		font-size: 2rem;
 	}
+	& .contentMiddleBlockcontent img {
+		max-width: 90%;
+		@media (--content-query) {
+		max-width: 60%;
+		}
+	}
 }
