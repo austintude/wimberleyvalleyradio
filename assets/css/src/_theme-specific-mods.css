@@ -447,13 +447,13 @@ figcaption {
 
 /* start of mods */
 .custom-logo {
-	width: 3em;
-	top: 0;
+	width: 4em;
+	top: .7rem;
 	position: fixed;
 	left: 1.3em;
 	z-index: 6;
 	@media (--content-query) {
-		width: 5.65em;
+		width: 5rem;
 	}
 }
 footer .custom-logo {

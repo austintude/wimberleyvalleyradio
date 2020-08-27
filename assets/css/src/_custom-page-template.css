@@ -1,4 +1,10 @@
 .page-template-custom-page-template {
+	& a,
+	a:hover,
+	a:active,
+	a:visited {
+		color: #260a8b;
+	}
 	& .mobileiFrame {
 		@media (--content-query) {
 			display: none;
